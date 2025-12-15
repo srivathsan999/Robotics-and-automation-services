@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - RoboTech</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#0B0F1A] text-[#E5E7EB]">
+    
+    <!-- Navbar -->
+    <nav class="glass fixed w-full top-0 z-50 px-4 py-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-8 w-8">
+                        <span class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu (lg and above) -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-[#00D9FF] transition">Home</a>
+                    <a href="services.html" class="hover:text-[#00D9FF] transition">Services</a>
+                    <a href="industries.html" class="hover:text-[#00D9FF] transition">Industries</a>
+                    <a href="case-studies.html" class="hover:text-[#00D9FF] transition">Case Studies</a>
+                    <a href="about.html" class="hover:text-[#00D9FF] transition">About</a>
+                    <a href="contact.html" class="text-[#00D9FF] hover:text-[#8B5CF6] transition">Contact</a>
+                    <button id="theme-toggle" class="text-2xl">☀️</button>
+                    <a href="signup.html" class="px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF]">Sign Up</a>
+                    <a href="contact.html" class="neomorph px-6 py-2 rounded-lg text-[#00D9FF] hover:text-white transition">Request a Quote</a>
+                </div>
+                
+                <!-- Tablet Menu (md to lg) -->
+                <div class="hidden md:flex lg:hidden items-center space-x-4">
+                    <button id="theme-toggle-tablet" class="text-2xl">☀️</button>
+                    <button id="tablet-menu-button" class="text-2xl">☰</button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
+            </div>
+            
+            <!-- Tablet Menu Dropdown -->
+            <div id="tablet-menu" class="hidden mt-4 pb-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home</a>
+                    <a href="services.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Services</a>
+                    <a href="industries.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Industries</a>
+                    <a href="case-studies.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Case Studies</a>
+                    <a href="about.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">About</a>
+                    <a href="contact.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Contact</a>
+                    <a href="signup.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Sign Up</a>
+                    <a href="contact.html" class="block px-4 py-2 rounded-lg neomorph text-[#00D9FF] hover:text-white text-sm text-center">Request a Quote</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
+                <a href="index.html" class="block hover:text-[#00D9FF] transition">Home</a>
+                <a href="services.html" class="block hover:text-[#00D9FF] transition">Services</a>
+                <a href="industries.html" class="block hover:text-[#00D9FF] transition">Industries</a>
+                <a href="case-studies.html" class="block hover:text-[#00D9FF] transition">Case Studies</a>
+                <a href="about.html" class="block hover:text-[#00D9FF] transition">About</a>
+                <a href="contact.html" class="block text-[#00D9FF]">Contact</a>
+                <button id="theme-toggle-mobile" class="text-2xl">☀️</button>
+                <a href="signup.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Sign Up</a>
+                <a href="contact.html" class="inline-block neomorph px-6 py-2 rounded-lg text-[#00D9FF]">Request a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="container mx-auto max-w-5xl text-center fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">
+                Contact Us
+            </h1>
+            <p class="text-xl md:text-2xl text-[#9CA3AF] mb-8 max-w-3xl mx-auto">
+                Get in touch with our team to discuss your automation needs
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="py-20 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Contact Form -->
+                <div class="lg:col-span-2">
+                    <div class="glass p-8 md:p-12 rounded-lg fade-in">
+                        <h2 class="text-3xl font-bold mb-6 text-[#00D9FF] text-center">Send Us a Message</h2>
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="firstName" class="block text-sm font-semibold mb-2 text-[#9CA3AF]">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 bg-[#111827] border border-[#00D9FF]/20 rounded-lg focus:border-[#00D9FF] focus:outline-none text-[#E5E7EB]" placeholder="John">
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-sm font-semibold mb-2 text-[#9CA3AF]">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 bg-[#111827] border border-[#00D9FF]/20 rounded-lg focus:border-[#00D9FF] focus:outline-none text-[#E5E7EB]" placeholder="Doe">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-semibold mb-2 text-[#9CA3AF]">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-[#111827] border border-[#00D9FF]/20 rounded-lg focus:border-[#00D9FF] focus:outline-none text-[#E5E7EB]" placeholder="john.doe@example.com">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold mb-2 text-[#9CA3AF]">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 bg-[#111827] border border-[#00D9FF]/20 rounded-lg focus:border-[#00D9FF] focus:outline-none text-[#E5E7EB]" placeholder="+1 (555) 123-4567">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-semibold mb-2 text-[#9CA3AF]">Subject</label>
+                                <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 bg-[#111827] border border-[#00D9FF]/20 rounded-lg focus:border-[#00D9FF] focus:outline-none text-[#E5E7EB]" placeholder="How can we help?">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-semibold mb-2 text-[#9CA3AF]">Message</label>
+                                <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 bg-[#111827] border border-[#00D9FF]/20 rounded-lg focus:border-[#00D9FF] focus:outline-none text-[#E5E7EB]" placeholder="Tell us about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="neomorph w-full px-8 py-4 rounded-lg text-[#00D9FF] hover:text-white text-lg font-semibold glow-hover transition">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="space-y-6 fade-in">
+                    <div class="glass p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-4 text-[#00D9FF]">Business Email</h3>
+                        <a href="mailto:info@robotech.com" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">info@robotech.com</a>
+                    </div>
+                    
+                    <div class="glass p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-4 text-[#00D9FF]">Phone</h3>
+                        <a href="tel:+15551234567" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">+1 (555) 123-4567</a>
+                    </div>
+                    
+                    <div class="glass p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-4 text-[#00D9FF]">Address</h3>
+                        <p class="text-[#9CA3AF]">
+                            123 Innovation Drive<br>
+                            Tech Valley, CA 94025<br>
+                            United States
+                        </p>
+                    </div>
+                    
+                    <div class="glass p-6 rounded-lg">
+                        <h3 class="text-xl font-bold mb-4 text-[#00D9FF]">Business Hours</h3>
+                        <p class="text-[#9CA3AF] text-sm">
+                            Monday - Friday: 8:00 AM - 6:00 PM<br>
+                            Saturday: 9:00 AM - 2:00 PM<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#111827] py-12 px-4 border-t border-[#00D9FF]/20 mt-20">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-8 w-8">
+                        <span class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
+                    </div>
+                    <p class="text-[#9CA3AF] text-sm">
+                        Leading the future of robotics and automation solutions across industries worldwide.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-[#00D9FF]">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Services</a></li>
+                        <li><a href="industries.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Industries</a></li>
+                        <li><a href="case-studies.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Case Studies</a></li>
+                        <li><a href="about.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-[#00D9FF]">Policies</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-[#00D9FF]">Connect</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://linkedin.com" target="_blank" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">LinkedIn</a></li>
+                        <li><a href="contact.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Contact Us</a></li>
+                        <li><a href="mailto:info@robotech.com" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">info@robotech.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center text-sm text-[#9CA3AF] border-t border-[#00D9FF]/20 pt-8">
+                <div class="flex items-center justify-center space-x-2">
+                    <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-5 w-5">
+                    <p>&copy; 2025 RoboTech. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

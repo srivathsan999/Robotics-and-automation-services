@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - RoboTech</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#0B0F1A] text-[#E5E7EB]">
+    
+    <!-- Navbar -->
+    <nav class="glass fixed w-full top-0 z-50 px-4 py-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-8 w-8">
+                        <span class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu (lg and above) -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-[#00D9FF] transition">Home</a>
+                    <a href="services.html" class="hover:text-[#00D9FF] transition">Services</a>
+                    <a href="industries.html" class="hover:text-[#00D9FF] transition">Industries</a>
+                    <a href="case-studies.html" class="hover:text-[#00D9FF] transition">Case Studies</a>
+                    <a href="about.html" class="text-[#00D9FF] hover:text-[#8B5CF6] transition">About</a>
+                    <a href="contact.html" class="hover:text-[#00D9FF] transition">Contact</a>
+                    <button id="theme-toggle" class="text-2xl">☀️</button>
+                    <a href="signup.html" class="px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF]">Sign Up</a>
+                    <a href="contact.html" class="neomorph px-6 py-2 rounded-lg text-[#00D9FF] hover:text-white transition">Request a Quote</a>
+                </div>
+                
+                <!-- Tablet Menu (md to lg) -->
+                <div class="hidden md:flex lg:hidden items-center space-x-4">
+                    <button id="theme-toggle-tablet" class="text-2xl">☀️</button>
+                    <button id="tablet-menu-button" class="text-2xl">☰</button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
+            </div>
+            
+            <!-- Tablet Menu Dropdown -->
+            <div id="tablet-menu" class="hidden mt-4 pb-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home</a>
+                    <a href="services.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Services</a>
+                    <a href="industries.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Industries</a>
+                    <a href="case-studies.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Case Studies</a>
+                    <a href="about.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">About</a>
+                    <a href="contact.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Contact</a>
+                    <a href="signup.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Sign Up</a>
+                    <a href="contact.html" class="block px-4 py-2 rounded-lg neomorph text-[#00D9FF] hover:text-white text-sm text-center">Request a Quote</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
+                <a href="index.html" class="block hover:text-[#00D9FF] transition">Home</a>
+                <a href="services.html" class="block hover:text-[#00D9FF] transition">Services</a>
+                <a href="industries.html" class="block hover:text-[#00D9FF] transition">Industries</a>
+                <a href="case-studies.html" class="block hover:text-[#00D9FF] transition">Case Studies</a>
+                <a href="about.html" class="block text-[#00D9FF]">About</a>
+                <a href="contact.html" class="block hover:text-[#00D9FF] transition">Contact</a>
+                <button id="theme-toggle-mobile" class="text-2xl">☀️</button>
+                <a href="signup.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Sign Up</a>
+                <a href="contact.html" class="inline-block neomorph px-6 py-2 rounded-lg text-[#00D9FF]">Request a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="container mx-auto max-w-5xl text-center fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">
+                About RoboTech
+            </h1>
+            <p class="text-xl md:text-2xl text-[#9CA3AF] mb-8 max-w-3xl mx-auto">
+                Pioneering the future of robotics and automation solutions
+            </p>
+        </div>
+    </section>
+
+    <!-- Company Story -->
+    <section class="company-story py-20 px-4 bg-[#111827]">
+        <div class="container mx-auto max-w-5xl">
+            <div class="fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-[#00D9FF]">Our Story</h2>
+                <div class="space-y-4 text-lg text-[#9CA3AF]">
+                    <p>
+                        Founded in 2018, RoboTech emerged from a vision to bridge the gap between cutting-edge robotics technology and practical industrial applications. Our founders, a team of engineers and automation experts, recognized the transformative potential of intelligent automation systems.
+                    </p>
+                    <p>
+                        Starting with a small team of 10 specialists, we've grown into a global leader in robotics and automation solutions, serving clients across five continents. Our journey has been marked by continuous innovation, unwavering commitment to quality, and a deep understanding of industry challenges.
+                    </p>
+                    <p>
+                        Today, we're proud to have completed over 500 successful automation projects, helping businesses achieve remarkable improvements in efficiency, quality, and operational excellence. Our expertise spans multiple industries, from manufacturing and logistics to healthcare and energy.
+                    </p>
+                    <p>
+                        What sets us apart is our holistic approach - we don't just deploy technology; we partner with our clients to understand their unique needs and deliver solutions that drive real, measurable results. Every project is an opportunity to push the boundaries of what's possible in automation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="mission-section py-20 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="mission-card bg-[#111827] p-8 md:p-12 rounded-lg border border-[#00D9FF]/20 fade-in glow-hover">
+                <div class="flex items-center mb-6">
+                    <div class="text-5xl mr-4">🎯</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF]">Our Mission</h2>
+                </div>
+                <p class="text-xl text-[#9CA3AF] leading-relaxed">
+                    To empower businesses worldwide with innovative robotics and automation solutions that enhance productivity, improve quality, and create sustainable competitive advantages. We strive to make advanced automation accessible, reliable, and transformative for organizations of all sizes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision -->
+    <section class="vision-section py-20 px-4 bg-[#111827]">
+        <div class="container mx-auto max-w-5xl">
+            <div class="vision-card bg-[#0B0F1A] p-8 md:p-12 rounded-lg border border-[#00D9FF]/20 fade-in glow-hover">
+                <div class="flex items-center mb-6">
+                    <div class="text-5xl mr-4">🔮</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF]">Our Vision</h2>
+                </div>
+                <p class="text-xl text-[#9CA3AF] leading-relaxed">
+                    To be the global leader in intelligent automation, where human ingenuity meets robotic precision. We envision a future where automation seamlessly enhances human capabilities, creating safer, more efficient, and more fulfilling work environments. Our goal is to accelerate the adoption of automation technologies that benefit businesses, employees, and society as a whole.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values-section py-20 px-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-[#00D9FF]">Our Values</h2>
+                <p class="text-xl text-[#9CA3AF] max-w-3xl mx-auto">
+                    The principles that guide everything we do
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="value-card bg-[#111827] p-6 rounded-lg border border-[#00D9FF]/20 hover:border-[#00D9FF]/50 transition fade-in equal-height glow-hover">
+                    <div class="text-4xl mb-4">💡</div>
+                    <h3 class="text-xl font-bold mb-3 text-[#8B5CF6]">Innovation</h3>
+                    <p class="text-[#9CA3AF]">We continuously explore new technologies and methodologies to deliver cutting-edge solutions that stay ahead of industry trends.</p>
+                </div>
+                
+                <div class="value-card bg-[#111827] p-6 rounded-lg border border-[#00D9FF]/20 hover:border-[#00D9FF]/50 transition fade-in equal-height glow-hover">
+                    <div class="text-4xl mb-4">⭐</div>
+                    <h3 class="text-xl font-bold mb-3 text-[#8B5CF6]">Excellence</h3>
+                    <p class="text-[#9CA3AF]">We maintain the highest standards in every project, ensuring quality, reliability, and performance that exceeds expectations.</p>
+                </div>
+                
+                <div class="value-card bg-[#111827] p-6 rounded-lg border border-[#00D9FF]/20 hover:border-[#00D9FF]/50 transition fade-in equal-height glow-hover">
+                    <div class="text-4xl mb-4">🤝</div>
+                    <h3 class="text-xl font-bold mb-3 text-[#8B5CF6]">Partnership</h3>
+                    <p class="text-[#9CA3AF]">We build long-term relationships with our clients, working collaboratively to achieve shared success and continuous improvement.</p>
+                </div>
+                
+                <div class="value-card bg-[#111827] p-6 rounded-lg border border-[#00D9FF]/20 hover:border-[#00D9FF]/50 transition fade-in equal-height glow-hover">
+                    <div class="text-4xl mb-4">🌱</div>
+                    <h3 class="text-xl font-bold mb-3 text-[#8B5CF6]">Sustainability</h3>
+                    <p class="text-[#9CA3AF]">We design solutions that not only improve efficiency but also reduce environmental impact and promote sustainable business practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section py-20 px-4 bg-[#111827]">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Projects Completed Card -->
+                <div class="stat-card fade-in">
+                    <div class="stat-card-content">
+                        <div class="stat-icon mb-4">📊</div>
+                        <div class="text-5xl font-bold text-[#00D9FF] mb-2 stat-number">500+</div>
+                        <div class="text-[#9CA3AF] text-lg font-semibold">Projects Completed</div>
+                        <div class="stat-card-glow"></div>
+                    </div>
+                </div>
+                
+                <!-- Countries Served Card -->
+                <div class="stat-card fade-in">
+                    <div class="stat-card-content">
+                        <div class="stat-icon mb-4">🌍</div>
+                        <div class="text-5xl font-bold text-[#00D9FF] mb-2 stat-number">50+</div>
+                        <div class="text-[#9CA3AF] text-lg font-semibold">Countries Served</div>
+                        <div class="stat-card-glow"></div>
+                    </div>
+                </div>
+                
+                <!-- Expert Team Members Card -->
+                <div class="stat-card fade-in">
+                    <div class="stat-card-content">
+                        <div class="stat-icon mb-4">👥</div>
+                        <div class="text-5xl font-bold text-[#00D9FF] mb-2 stat-number">200+</div>
+                        <div class="text-[#9CA3AF] text-lg font-semibold">Expert Team Members</div>
+                        <div class="stat-card-glow"></div>
+                    </div>
+                </div>
+                
+                <!-- Client Satisfaction Card -->
+                <div class="stat-card fade-in">
+                    <div class="stat-card-content">
+                        <div class="stat-icon mb-4">⭐</div>
+                        <div class="text-5xl font-bold text-[#00D9FF] mb-2 stat-number">98%</div>
+                        <div class="text-[#9CA3AF] text-lg font-semibold">Client Satisfaction</div>
+                        <div class="stat-card-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 bg-gradient-to-r from-[#00D9FF]/10 to-[#8B5CF6]/10">
+        <div class="container mx-auto max-w-5xl text-center fade-in">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-[#00D9FF]">
+                Join Us on This Journey
+            </h2>
+            <p class="text-xl text-[#9CA3AF] mb-8 max-w-3xl mx-auto">
+                Let's work together to transform your operations and achieve remarkable results
+            </p>
+            <a href="contact.html" class="inline-block neomorph px-8 py-4 rounded-lg text-[#00D9FF] hover:text-white text-lg font-semibold glow-hover">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#111827] py-12 px-4 border-t border-[#00D9FF]/20">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-8 w-8">
+                        <span class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
+                    </div>
+                    <p class="text-[#9CA3AF] text-sm">
+                        Leading the future of robotics and automation solutions across industries worldwide.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-[#00D9FF]">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Services</a></li>
+                        <li><a href="industries.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Industries</a></li>
+                        <li><a href="case-studies.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Case Studies</a></li>
+                        <li><a href="about.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-[#00D9FF]">Policies</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-[#00D9FF]">Connect</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://linkedin.com" target="_blank" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">LinkedIn</a></li>
+                        <li><a href="contact.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Contact Us</a></li>
+                        <li><a href="mailto:info@robotech.com" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">info@robotech.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center text-sm text-[#9CA3AF] border-t border-[#00D9FF]/20 pt-8">
+                <div class="flex items-center justify-center space-x-2">
+                    <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-5 w-5">
+                    <p>&copy; 2025 RoboTech. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

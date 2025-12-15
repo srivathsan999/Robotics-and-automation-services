@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - RoboTech</title>
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#0B0F1A] text-[#E5E7EB]">
+    
+    <!-- Navbar -->
+    <nav class="glass fixed w-full top-0 z-50 px-4 py-4">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-8 w-8">
+                        <span class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu (lg and above) -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-[#00D9FF] transition">Home</a>
+                    <a href="services.html" class="text-[#00D9FF] hover:text-[#8B5CF6] transition">Services</a>
+                    <a href="industries.html" class="hover:text-[#00D9FF] transition">Industries</a>
+                    <a href="case-studies.html" class="hover:text-[#00D9FF] transition">Case Studies</a>
+                    <a href="about.html" class="hover:text-[#00D9FF] transition">About</a>
+                    <a href="contact.html" class="hover:text-[#00D9FF] transition">Contact</a>
+                    <button id="theme-toggle" class="text-2xl">☀️</button>
+                    <a href="signup.html" class="px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF]">Sign Up</a>
+                    <a href="contact.html" class="neomorph px-6 py-2 rounded-lg text-[#00D9FF] hover:text-white transition">Request a Quote</a>
+                </div>
+                
+                <!-- Tablet Menu (md to lg) -->
+                <div class="hidden md:flex lg:hidden items-center space-x-4">
+                    <button id="theme-toggle-tablet" class="text-2xl">☀️</button>
+                    <button id="tablet-menu-button" class="text-2xl">☰</button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
+            </div>
+            
+            <!-- Tablet Menu Dropdown -->
+            <div id="tablet-menu" class="hidden mt-4 pb-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home</a>
+                    <a href="services.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Services</a>
+                    <a href="industries.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Industries</a>
+                    <a href="case-studies.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Case Studies</a>
+                    <a href="about.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">About</a>
+                    <a href="contact.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Contact</a>
+                    <a href="signup.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Sign Up</a>
+                    <a href="contact.html" class="block px-4 py-2 rounded-lg neomorph text-[#00D9FF] hover:text-white text-sm text-center">Request a Quote</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
+                <a href="index.html" class="block hover:text-[#00D9FF] transition">Home</a>
+                <a href="services.html" class="block text-[#00D9FF]">Services</a>
+                <a href="industries.html" class="block hover:text-[#00D9FF] transition">Industries</a>
+                <a href="case-studies.html" class="block hover:text-[#00D9FF] transition">Case Studies</a>
+                <a href="about.html" class="block hover:text-[#00D9FF] transition">About</a>
+                <a href="contact.html" class="block hover:text-[#00D9FF] transition">Contact</a>
+                <button id="theme-toggle-mobile" class="text-2xl">☀️</button>
+                <a href="signup.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Sign Up</a>
+                <a href="contact.html" class="inline-block neomorph px-6 py-2 rounded-lg text-[#00D9FF]">Request a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="container mx-auto max-w-5xl text-center fade-in">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">
+                Our Services
+            </h1>
+            <p class="text-xl md:text-2xl text-[#9CA3AF] mb-8 max-w-3xl mx-auto">
+                Comprehensive robotics and automation solutions designed to transform your operations
+            </p>
+        </div>
+    </section>
+
+    <!-- Robotics Integration -->
+    <section class="service-detail-section py-20 px-4 bg-[#111827]">
+        <div class="container mx-auto max-w-5xl">
+            <div class="service-detail-card bg-[#0B0F1A] p-8 md:p-12 rounded-lg border border-[#00D9FF]/20 fade-in glow-hover">
+                <div class="flex items-center mb-6">
+                    <div class="text-5xl mr-4">🤖</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF]">Robotics Integration</h2>
+                </div>
+                <p class="text-lg text-[#9CA3AF] mb-6">
+                    Seamlessly integrate advanced robotic systems into your existing infrastructure. Our expert team handles everything from initial assessment to full deployment, ensuring minimal disruption to your operations.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Key Features</h3>
+                        <ul class="space-y-2 text-[#9CA3AF]">
+                            <li>• Custom robot configuration and programming</li>
+                            <li>• Seamless integration with existing systems</li>
+                            <li>• Comprehensive testing and validation</li>
+                            <li>• Staff training and documentation</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Applications</h3>
+                        <ul class="space-y-2 text-[#9CA3AF]">
+                            <li>• Material handling and assembly</li>
+                            <li>• Quality inspection and testing</li>
+                            <li>• Welding and fabrication</li>
+                            <li>• Pick and place operations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industrial Automation -->
+    <section class="service-detail-section py-20 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="service-detail-card bg-[#111827] p-8 md:p-12 rounded-lg border border-[#00D9FF]/20 fade-in glow-hover">
+                <div class="flex items-center mb-6">
+                    <div class="text-5xl mr-4">⚙️</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF]">Industrial Automation</h2>
+                </div>
+                <p class="text-lg text-[#9CA3AF] mb-6">
+                    Optimize your manufacturing processes with state-of-the-art automation solutions. From PLC programming to full production line automation, we deliver systems that maximize efficiency and reduce operational costs.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Capabilities</h3>
+                        <ul class="space-y-2 text-[#9CA3AF]">
+                            <li>• PLC and SCADA system design</li>
+                            <li>• Production line automation</li>
+                            <li>• Process optimization and control</li>
+                            <li>• Real-time monitoring and analytics</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Benefits</h3>
+                        <ul class="space-y-2 text-[#9CA3AF]">
+                            <li>• Increased production throughput</li>
+                            <li>• Reduced waste and energy consumption</li>
+                            <li>• Improved product quality consistency</li>
+                            <li>• Enhanced safety and compliance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI & Vision Systems -->
+    <section class="service-detail-section py-20 px-4 bg-[#111827]">
+        <div class="container mx-auto max-w-5xl">
+            <div class="service-detail-card bg-[#0B0F1A] p-8 md:p-12 rounded-lg border border-[#00D9FF]/20 fade-in glow-hover">
+                <div class="flex items-center mb-6">
+                    <div class="text-5xl mr-4">👁️</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF]">AI & Vision Systems</h2>
+                </div>
+                <p class="text-lg text-[#9CA3AF] mb-6">
+                    Leverage the power of artificial intelligence and advanced computer vision to automate inspection, quality control, and decision-making processes. Our AI-powered systems learn and adapt to improve accuracy over time.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Technology</h3>
+                        <ul class="space-y-2 text-[#9CA3AF]">
+                            <li>• Deep learning and neural networks</li>
+                            <li>• Real-time image processing</li>
+                            <li>• Object detection and recognition</li>
+                            <li>• Predictive analytics and insights</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Use Cases</h3>
+                        <ul class="space-y-2 text-[#9CA3AF]">
+                            <li>• Automated quality inspection</li>
+                            <li>• Defect detection and classification</li>
+                            <li>• Guided robotic operations</li>
+                            <li>• Predictive maintenance monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Maintenance & Support -->
+    <section class="service-detail-section py-20 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <div class="service-detail-card bg-[#111827] p-8 md:p-12 rounded-lg border border-[#00D9FF]/20 fade-in glow-hover">
+                <div class="flex items-center mb-6">
+                    <div class="text-5xl mr-4">🔧</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF]">Maintenance & Support</h2>
+                </div>
+                <p class="text-lg text-[#9CA3AF] mb-6">
+                    Keep your automation systems running at peak performance with our comprehensive maintenance and support services. Our team of experts provides round-the-clock assistance to minimize downtime and maximize productivity.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Services</h3>
+                        <ul class="space-y-2 text-[#9CA3AF]">
+                            <li>• 24/7 technical support hotline</li>
+                            <li>• Preventive maintenance programs</li>
+                            <li>• Remote monitoring and diagnostics</li>
+                            <li>• Emergency repair and response</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Support Plans</h3>
+                        <ul class="space-y-2 text-[#9CA3AF]">
+                            <li>• Basic: Scheduled maintenance</li>
+                            <li>• Professional: Priority support</li>
+                            <li>• Enterprise: Dedicated support team</li>
+                            <li>• Custom: Tailored to your needs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-4 bg-gradient-to-r from-[#00D9FF]/10 to-[#8B5CF6]/10">
+        <div class="container mx-auto max-w-5xl text-center fade-in">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-[#00D9FF]">
+                Ready to Get Started?
+            </h2>
+            <p class="text-xl text-[#9CA3AF] mb-8 max-w-3xl mx-auto">
+                Contact us today to discuss how our services can help transform your operations
+            </p>
+            <a href="contact.html" class="inline-block neomorph px-8 py-4 rounded-lg text-[#00D9FF] hover:text-white text-lg font-semibold glow-hover">
+                Request a Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#111827] py-12 px-4 border-t border-[#00D9FF]/20">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-8 w-8">
+                        <span class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
+                    </div>
+                    <p class="text-[#9CA3AF] text-sm">
+                        Leading the future of robotics and automation solutions across industries worldwide.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-[#00D9FF]">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Services</a></li>
+                        <li><a href="industries.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Industries</a></li>
+                        <li><a href="case-studies.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Case Studies</a></li>
+                        <li><a href="about.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-[#00D9FF]">Policies</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-[#00D9FF]">Connect</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://linkedin.com" target="_blank" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">LinkedIn</a></li>
+                        <li><a href="contact.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Contact Us</a></li>
+                        <li><a href="mailto:info@robotech.com" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">info@robotech.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text-center text-sm text-[#9CA3AF] border-t border-[#00D9FF]/20 pt-8">
+                <div class="flex items-center justify-center space-x-2">
+                    <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-5 w-5">
+                    <p>&copy; 2025 RoboTech. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
