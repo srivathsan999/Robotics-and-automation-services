@@ -780,6 +780,47 @@ nav img[src*="favicon.svg"] {
   }
 }
 
+/* Navbar adjustments for tablet views */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Ensure tablet menu buttons have proper spacing */
+  nav .hidden.md\\:flex.lg\\:hidden {
+    gap: 0.75rem;
+  }
+  
+  /* Tablet menu grid adjustments */
+  #tablet-menu .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+  
+  /* Ensure navbar doesn't overflow */
+  nav .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Navbar adjustments for 1024px to 1366px range */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  /* Reduce spacing between navbar items for better fit */
+  nav .hidden.lg\\:flex.items-center.space-x-8 {
+    gap: 1rem;
+  }
+  
+  /* Make buttons slightly smaller at this breakpoint */
+  nav .hidden.lg\\:flex a.px-6 {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Ensure theme toggle doesn't cause issues */
+  nav button.text-2xl {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
 /* Case Study Preview Section - Light Mode */
 .light-theme .case-study-preview {
   background-color: #FFFFFF !important;

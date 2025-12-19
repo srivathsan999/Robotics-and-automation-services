@@ -22,22 +22,23 @@
                 </div>
                 
                 <!-- Desktop Menu (lg and above) -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="hover:text-[#00D9FF] transition">Home</a>
-                    <a href="services.html" class="hover:text-[#00D9FF] transition">Services</a>
-                    <a href="industries.html" class="text-[#00D9FF] hover:text-[#8B5CF6] transition">Industries</a>
-                    <a href="case-studies.html" class="hover:text-[#00D9FF] transition">Case Studies</a>
-                    <a href="about.html" class="hover:text-[#00D9FF] transition">About</a>
-                    <a href="contact.html" class="hover:text-[#00D9FF] transition">Contact</a>
-                    <button id="theme-toggle" class="text-2xl">☀️</button>
-                    <a href="signup.html" class="px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF]">Sign Up</a>
-                    <a href="contact.html" class="neomorph px-6 py-2 rounded-lg text-[#00D9FF] hover:text-white transition">Request a Quote</a>
+                <div class="hidden lg:flex items-center gap-4 xl:gap-8">
+                    <a href="index.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Home</a>
+                    <a href="services.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Services</a>
+                    <a href="industries.html" class="text-[#00D9FF] hover:text-[#8B5CF6] transition whitespace-nowrap">Industries</a>
+                    <a href="case-studies.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Case Studies</a>
+                    <a href="about.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">About</a>
+                    <a href="contact.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Contact</a>
+                    <button id="theme-toggle" class="text-xl xl:text-2xl flex-shrink-0">☀️</button>
+                    <a href="login.html" class="px-4 xl:px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm xl:text-base whitespace-nowrap">Login</a>
+                    <a href="signup.html" class="px-4 xl:px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm xl:text-base whitespace-nowrap">Sign Up</a>
+                    <a href="contact.html" class="neomorph px-4 xl:px-6 py-2 rounded-lg text-[#00D9FF] hover:text-white transition text-sm xl:text-base whitespace-nowrap">Request a Quote</a>
                 </div>
                 
                 <!-- Tablet Menu (md to lg) -->
-                <div class="hidden md:flex lg:hidden items-center space-x-4">
-                    <button id="theme-toggle-tablet" class="text-2xl">☀️</button>
-                    <button id="tablet-menu-button" class="text-2xl">☰</button>
+                <div class="hidden md:flex lg:hidden items-center gap-3">
+                    <button id="theme-toggle-tablet" class="text-xl flex-shrink-0">☀️</button>
+                    <button id="tablet-menu-button" class="text-xl flex-shrink-0">☰</button>
                 </div>
                 
                 <!-- Mobile Menu Button -->
@@ -53,6 +54,7 @@
                     <a href="case-studies.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Case Studies</a>
                     <a href="about.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">About</a>
                     <a href="contact.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Contact</a>
+                    <a href="login.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Login</a>
                     <a href="signup.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Sign Up</a>
                     <a href="contact.html" class="block px-4 py-2 rounded-lg neomorph text-[#00D9FF] hover:text-white text-sm text-center">Request a Quote</a>
                 </div>
@@ -67,6 +69,7 @@
                 <a href="about.html" class="block hover:text-[#00D9FF] transition">About</a>
                 <a href="contact.html" class="block hover:text-[#00D9FF] transition">Contact</a>
                 <button id="theme-toggle-mobile" class="text-2xl">☀️</button>
+                <a href="login.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Login</a>
                 <a href="signup.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Sign Up</a>
                 <a href="contact.html" class="inline-block neomorph px-6 py-2 rounded-lg text-[#00D9FF]">Request a Quote</a>
             </div>
@@ -89,15 +92,15 @@
     <section class="industry-detail-section py-20 px-4 bg-[#111827]">
         <div class="container mx-auto max-w-5xl">
             <div class="industry-detail-card bg-[#0B0F1A] p-8 md:p-12 rounded-lg border border-[#00D9FF]/20 fade-in glow-hover">
-                <div class="flex items-center mb-6">
-                    <div class="text-5xl mr-4">🏭</div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF]">Manufacturing</h2>
+                <div class="flex flex-col md:flex-row md:items-center md:justify-center mb-6">
+                    <div class="text-5xl mb-3 md:mb-0 md:mr-4 text-center md:text-center">🏭</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF] text-center md:text-center">Manufacturing</h2>
                 </div>
-                <p class="text-lg text-[#9CA3AF] mb-6">
+                <p class="text-lg text-[#9CA3AF] mb-6 text-center md:text-center">
                     Transform your manufacturing operations with intelligent automation systems. Our solutions enable precise control, quality assurance, and significant efficiency gains across production lines.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                    <div class="text-center md:text-center">
                         <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Solutions</h3>
                         <ul class="space-y-2 text-[#9CA3AF]">
                             <li>• Automated assembly lines</li>
@@ -106,7 +109,7 @@
                             <li>• Production monitoring and analytics</li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="text-center md:text-center">
                         <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Results</h3>
                         <ul class="space-y-2 text-[#9CA3AF]">
                             <li>• Up to 60% productivity increase</li>
@@ -124,15 +127,15 @@
     <section class="industry-detail-section py-20 px-4">
         <div class="container mx-auto max-w-5xl">
             <div class="industry-detail-card bg-[#111827] p-8 md:p-12 rounded-lg border border-[#00D9FF]/20 fade-in glow-hover">
-                <div class="flex items-center mb-6">
-                    <div class="text-5xl mr-4">🚗</div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF]">Automotive</h2>
+                <div class="flex flex-col md:flex-row md:items-center md:justify-center mb-6">
+                    <div class="text-5xl mb-3 md:mb-0 md:mr-4 text-center md:text-center">🚗</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF] text-center md:text-center">Automotive</h2>
                 </div>
-                <p class="text-lg text-[#9CA3AF] mb-6">
+                <p class="text-lg text-[#9CA3AF] mb-6 text-center md:text-center">
                     Revolutionize automotive production with precision robotics and automation. From component assembly to final inspection, our systems ensure the highest quality standards while optimizing production costs.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                    <div class="text-center md:text-center">
                         <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Applications</h3>
                         <ul class="space-y-2 text-[#9CA3AF]">
                             <li>• Body welding and assembly</li>
@@ -141,7 +144,7 @@
                             <li>• Final inspection and testing</li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="text-center md:text-center">
                         <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Benefits</h3>
                         <ul class="space-y-2 text-[#9CA3AF]">
                             <li>• Consistent quality assurance</li>
@@ -159,15 +162,15 @@
     <section class="industry-detail-section py-20 px-4 bg-[#111827]">
         <div class="container mx-auto max-w-5xl">
             <div class="industry-detail-card bg-[#0B0F1A] p-8 md:p-12 rounded-lg border border-[#00D9FF]/20 fade-in glow-hover">
-                <div class="flex items-center mb-6">
-                    <div class="text-5xl mr-4">🏥</div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF]">Healthcare</h2>
+                <div class="flex flex-col md:flex-row md:items-center md:justify-center mb-6">
+                    <div class="text-5xl mb-3 md:mb-0 md:mr-4 text-center md:text-center">🏥</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF] text-center md:text-center">Healthcare</h2>
                 </div>
-                <p class="text-lg text-[#9CA3AF] mb-6">
+                <p class="text-lg text-[#9CA3AF] mb-6 text-center md:text-center">
                     Enhance patient care and operational efficiency with healthcare automation solutions. Our systems support medical professionals by handling routine tasks, enabling them to focus on patient care.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                    <div class="text-center md:text-center">
                         <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Solutions</h3>
                         <ul class="space-y-2 text-[#9CA3AF]">
                             <li>• Laboratory automation</li>
@@ -176,7 +179,7 @@
                             <li>• Medical device assembly</li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="text-center md:text-center">
                         <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Impact</h3>
                         <ul class="space-y-2 text-[#9CA3AF]">
                             <li>• Reduced medication errors</li>
@@ -194,15 +197,15 @@
     <section class="industry-detail-section py-20 px-4">
         <div class="container mx-auto max-w-5xl">
             <div class="industry-detail-card bg-[#111827] p-8 md:p-12 rounded-lg border border-[#00D9FF]/20 fade-in glow-hover">
-                <div class="flex items-center mb-6">
-                    <div class="text-5xl mr-4">📦</div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF]">Logistics</h2>
+                <div class="flex flex-col md:flex-row md:items-center md:justify-center mb-6">
+                    <div class="text-5xl mb-3 md:mb-0 md:mr-4 text-center md:text-center">📦</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF] text-center md:text-center">Logistics</h2>
                 </div>
-                <p class="text-lg text-[#9CA3AF] mb-6">
+                <p class="text-lg text-[#9CA3AF] mb-6 text-center md:text-center">
                     Optimize warehouse operations and distribution with intelligent logistics automation. Our systems streamline order fulfillment, inventory management, and shipping processes for maximum efficiency.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                    <div class="text-center md:text-center">
                         <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Technologies</h3>
                         <ul class="space-y-2 text-[#9CA3AF]">
                             <li>• Automated storage and retrieval</li>
@@ -211,7 +214,7 @@
                             <li>• Warehouse management integration</li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="text-center md:text-center">
                         <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Outcomes</h3>
                         <ul class="space-y-2 text-[#9CA3AF]">
                             <li>• 3x faster order fulfillment</li>
@@ -229,15 +232,15 @@
     <section class="industry-detail-section py-20 px-4 bg-[#111827]">
         <div class="container mx-auto max-w-5xl">
             <div class="industry-detail-card bg-[#0B0F1A] p-8 md:p-12 rounded-lg border border-[#00D9FF]/20 fade-in glow-hover">
-                <div class="flex items-center mb-6">
-                    <div class="text-5xl mr-4">⚡</div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF]">Energy</h2>
+                <div class="flex flex-col md:flex-row md:items-center md:justify-center mb-6">
+                    <div class="text-5xl mb-3 md:mb-0 md:mr-4 text-center md:text-center">⚡</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#00D9FF] text-center md:text-center">Energy</h2>
                 </div>
-                <p class="text-lg text-[#9CA3AF] mb-6">
+                <p class="text-lg text-[#9CA3AF] mb-6 text-center md:text-center">
                     Enhance safety and efficiency in energy production and distribution with advanced automation systems. Our solutions support renewable energy facilities, power plants, and grid management operations.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
+                    <div class="text-center md:text-center">
                         <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Applications</h3>
                         <ul class="space-y-2 text-[#9CA3AF]">
                             <li>• Solar panel cleaning and maintenance</li>
@@ -246,7 +249,7 @@
                             <li>• Substation operation systems</li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="text-center md:text-center">
                         <h3 class="text-xl font-bold text-[#8B5CF6] mb-3">Advantages</h3>
                         <ul class="space-y-2 text-[#9CA3AF]">
                             <li>• Reduced operational risks</li>
