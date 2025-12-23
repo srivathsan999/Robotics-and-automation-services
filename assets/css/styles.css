@@ -1235,3 +1235,70 @@ nav img[src*="favicon.svg"] {
   box-shadow: 0 0 20px rgba(0, 102, 204, 0.3) !important;
 }
 
+/* Case Studies - Light Mode: Featured Success */
+.light-theme .featured-success {
+  background-color: #F3F4F6 !important;
+}
+.light-theme .featured-success h2.text-\[#00D9FF\] {
+  color: #0066CC !important;
+}
+.light-theme .featured-success .text-\[#9CA3AF\] {
+  color: #6B7280 !important;
+}
+.light-theme .featured-success .bg-\[#0B0F1A\] {
+  background-color: #FFFFFF !important;
+  border-color: rgba(0, 102, 204, 0.3) !important;
+}
+.light-theme .featured-success .bg-\[#111827\] {
+  background-color: #F3F4F6 !important;
+}
+.light-theme .featured-success .border-2.border-\[#00D9FF\] {
+  border-color: #0066CC !important;
+  color: #0066CC !important;
+}
+.light-theme .featured-success .border-2.border-\[#00D9FF\]:hover {
+  background-color: #0066CC !important;
+  border-color: #0066CC !important;
+  color: #FFFFFF !important;
+}
+.light-theme .featured-success .glow-hover:hover {
+  box-shadow: 0 8px 24px rgba(0, 102, 204, 0.2) !important;
+}
+
+/* Featured Success - ensure inner accents and chips adapt */
+.light-theme .featured-success .text-\[#00D9FF\] {
+  color: #0066CC !important;
+}
+.light-theme .featured-success .text-\[#8B5CF6\] {
+  color: #6D28D9 !important;
+}
+.light-theme .featured-success .bg-\[#00D9FF\]\/10 {
+  background-color: rgba(0, 102, 204, 0.1) !important;
+}
+.light-theme .featured-success .bg-\[#00D9FF\]\/20 {
+  background-color: rgba(0, 102, 204, 0.15) !important;
+}
+.light-theme .featured-success .bg-\[#8B5CF6\]\/15 {
+  background-color: rgba(109, 40, 217, 0.15) !important;
+}
+.light-theme .featured-success .border-\[#00D9FF\]\/20 {
+  border-color: rgba(0, 102, 204, 0.3) !important;
+}
+
+/* Case Studies - Light Mode: Testimonials */
+.light-theme .testimonials {
+  background-color: #F3F4F6 !important;
+}
+.light-theme .testimonials h2.text-\[#00D9FF\] {
+  color: #0066CC !important;
+}
+.light-theme .testimonials .text-\[#9CA3AF\] {
+  color: #6B7280 !important;
+}
+.light-theme .testimonials .bg-\[#0B0F1A\] {
+  background-color: #FFFFFF !important;
+  border-color: rgba(0, 102, 204, 0.3) !important;
+}
+.light-theme .testimonials .glow-hover:hover {
+  box-shadow: 0 8px 24px rgba(0, 102, 204, 0.2) !important;
+}

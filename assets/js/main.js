@@ -130,6 +130,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.getElementById('contact-form');
   const loginForm = document.getElementById('login-form');
   const registerForm = document.getElementById('register-form');
+  const caseFilters = document.getElementById('case-filters');
+  const caseCards = document.querySelectorAll('.case-study-preview .case-card');
   
   // Contact form handler
   if (contactForm) {
@@ -158,5 +160,36 @@ document.addEventListener('DOMContentLoaded', function() {
       alert('Registration functionality would be handled by backend.');
     });
   }
+  
+  // Case Studies filter chips
+  if (caseFilters && caseCards.length) {
+    const chips = caseFilters.querySelectorAll('[data-filter]');
+    function setActiveChip(chip) {
+      chips.forEach(c => {
+        c.classList.remove('bg-[#00D9FF]', 'text-[#0B0F1A]');
+        c.classList.add('bg-[#00D9FF]/10', 'text-[#00D9FF]');
+      });
+      chip.classList.remove('bg-[#00D9FF]/10', 'text-[#00D9FF]');
+      chip.classList.add('bg-[#00D9FF]', 'text-[#0B0F1A]');
+    }
+    chips.forEach(chip => {
+      chip.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+        setActiveChip(this);
+        caseCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || filter === category) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+    // Set default active to 'All'
+    const allChip = caseFilters.querySelector('[data-filter="all"]');
+    if (allChip) {
+      setActiveChip(allChip);
+    }
+  }
 });
-
