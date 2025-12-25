@@ -1,0 +1,400 @@
+/* Case Study Detail Pages - Strict Light/Dark Theme Styles */
+
+/* Hero Section - Dark Theme (Default) */
+.cs-detail-hero {
+  background: linear-gradient(135deg, #0B0F1A 0%, #111827 100%);
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+
+.cs-detail-breadcrumb-link {
+  color: #9CA3AF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.cs-detail-breadcrumb-link:hover {
+  color: #00D9FF;
+}
+
+.cs-detail-category {
+  display: inline-block;
+  background: rgba(0, 217, 255, 0.1);
+  color: #00D9FF;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(0, 217, 255, 0.3);
+}
+
+.cs-detail-title {
+  background: linear-gradient(135deg, #00D9FF 0%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cs-detail-subtitle {
+  color: #9CA3AF;
+}
+
+/* Metrics Section - Dark Theme */
+.cs-detail-metrics {
+  background: #111827;
+}
+
+.cs-detail-metric-card {
+  background: #0B0F1A;
+  border: 2px solid rgba(0, 217, 255, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cs-detail-metric-card:hover {
+  border-color: #00D9FF;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+}
+
+.cs-detail-metric-value {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00D9FF 0%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.cs-detail-metric-label {
+  color: #9CA3AF;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Content Section - Dark Theme */
+.cs-detail-content {
+  background: #0B0F1A;
+}
+
+.cs-detail-section {
+  margin-bottom: 3rem;
+}
+
+.cs-detail-heading {
+  background: linear-gradient(135deg, #00D9FF 0%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cs-detail-text {
+  color: #E5E7EB;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+.cs-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.cs-detail-list li {
+  color: #E5E7EB;
+  padding: 0.75rem 0;
+  padding-left: 2rem;
+  position: relative;
+  line-height: 1.7;
+}
+
+.cs-detail-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #00D9FF;
+  font-weight: bold;
+}
+
+.cs-detail-list li strong {
+  color: #00D9FF;
+}
+
+/* Sidebar - Dark Theme */
+.cs-detail-sidebar {
+  position: sticky;
+  top: 6rem;
+}
+
+.cs-detail-sidebar-section {
+  background: #111827;
+  border: 2px solid rgba(0, 217, 255, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cs-detail-sidebar-heading {
+  color: #00D9FF;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.cs-detail-sidebar-content {
+  /* Spacing handled by individual items */
+}
+
+.cs-detail-sidebar-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 217, 255, 0.1);
+}
+
+.cs-detail-sidebar-item:last-child {
+  border-bottom: none;
+}
+
+.cs-detail-sidebar-label {
+  color: #9CA3AF;
+  font-weight: 600;
+}
+
+.cs-detail-sidebar-value {
+  color: #E5E7EB;
+  font-weight: 600;
+}
+
+.cs-detail-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.cs-detail-tech-tag {
+  background: rgba(0, 217, 255, 0.1);
+  color: #00D9FF;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 217, 255, 0.3);
+}
+
+.cs-detail-cta-button {
+  background: linear-gradient(135deg, #00D9FF 0%, #8B5CF6 100%);
+  color: #0B0F1A;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.cs-detail-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.4);
+}
+
+/* CTA Section - Dark Theme */
+.cs-detail-cta {
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border-top: 2px solid rgba(0, 217, 255, 0.2);
+  border-bottom: 2px solid rgba(0, 217, 255, 0.2);
+}
+
+.cs-detail-cta-title {
+  background: linear-gradient(135deg, #00D9FF 0%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cs-detail-cta-text {
+  color: #9CA3AF;
+}
+
+.cs-detail-cta-primary {
+  background: linear-gradient(135deg, #00D9FF 0%, #8B5CF6 100%);
+  color: #0B0F1A;
+  text-decoration: none;
+}
+
+.cs-detail-cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 217, 255, 0.4);
+}
+
+.cs-detail-cta-secondary {
+  background: transparent;
+  color: #00D9FF;
+  border: 2px solid #00D9FF;
+  text-decoration: none;
+}
+
+.cs-detail-cta-secondary:hover {
+  background: rgba(0, 217, 255, 0.1);
+  border-color: #00D9FF;
+}
+
+/* ========== LIGHT THEME STYLES ========== */
+
+.light-theme .cs-detail-hero {
+  background: linear-gradient(135deg, #F9FAFB 0%, #FFFFFF 100%);
+}
+
+.light-theme .cs-detail-breadcrumb-link {
+  color: #6B7280;
+}
+
+.light-theme .cs-detail-breadcrumb-link:hover {
+  color: #0066CC;
+}
+
+.light-theme .cs-detail-category {
+  background: rgba(0, 102, 204, 0.1);
+  color: #0066CC;
+  border-color: rgba(0, 102, 204, 0.3);
+}
+
+.light-theme .cs-detail-title {
+  background: linear-gradient(135deg, #0066CC 0%, #6D28D9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-theme .cs-detail-subtitle {
+  color: #6B7280;
+}
+
+.light-theme .cs-detail-metrics {
+  background: #F3F4F6;
+}
+
+.light-theme .cs-detail-metric-card {
+  background: #FFFFFF;
+  border-color: rgba(0, 102, 204, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .cs-detail-metric-card:hover {
+  border-color: #0066CC;
+  box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
+}
+
+.light-theme .cs-detail-metric-value {
+  background: linear-gradient(135deg, #0066CC 0%, #6D28D9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-theme .cs-detail-metric-label {
+  color: #6B7280;
+}
+
+.light-theme .cs-detail-content {
+  background: #FFFFFF;
+}
+
+.light-theme .cs-detail-heading {
+  background: linear-gradient(135deg, #0066CC 0%, #6D28D9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-theme .cs-detail-text {
+  color: #374151;
+}
+
+.light-theme .cs-detail-list li {
+  color: #374151;
+}
+
+.light-theme .cs-detail-list li::before {
+  color: #0066CC;
+}
+
+.light-theme .cs-detail-list li strong {
+  color: #0066CC;
+}
+
+.light-theme .cs-detail-sidebar-section {
+  background: #F9FAFB;
+  border-color: rgba(0, 102, 204, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.light-theme .cs-detail-sidebar-heading {
+  color: #0066CC;
+}
+
+.light-theme .cs-detail-sidebar-label {
+  color: #6B7280;
+}
+
+.light-theme .cs-detail-sidebar-value {
+  color: #374151;
+}
+
+.light-theme .cs-detail-tech-tag {
+  background: rgba(0, 102, 204, 0.1);
+  color: #0066CC;
+  border-color: rgba(0, 102, 204, 0.3);
+}
+
+.light-theme .cs-detail-cta-button {
+  background: linear-gradient(135deg, #0066CC 0%, #6D28D9 100%);
+  color: #FFFFFF;
+}
+
+.light-theme .cs-detail-cta-button:hover {
+  box-shadow: 0 10px 30px rgba(0, 102, 204, 0.3);
+}
+
+.light-theme .cs-detail-cta {
+  background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(109, 40, 217, 0.1) 100%);
+  border-top-color: rgba(0, 102, 204, 0.2);
+  border-bottom-color: rgba(0, 102, 204, 0.2);
+}
+
+.light-theme .cs-detail-cta-title {
+  background: linear-gradient(135deg, #0066CC 0%, #6D28D9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light-theme .cs-detail-cta-text {
+  color: #6B7280;
+}
+
+.light-theme .cs-detail-cta-primary {
+  background: linear-gradient(135deg, #0066CC 0%, #6D28D9 100%);
+  color: #FFFFFF;
+}
+
+.light-theme .cs-detail-cta-primary:hover {
+  box-shadow: 0 15px 40px rgba(0, 102, 204, 0.3);
+}
+
+.light-theme .cs-detail-cta-secondary {
+  color: #0066CC;
+  border-color: #0066CC;
+}
+
+.light-theme .cs-detail-cta-secondary:hover {
+  background: rgba(0, 102, 204, 0.1);
+  border-color: #0066CC;
+}
+

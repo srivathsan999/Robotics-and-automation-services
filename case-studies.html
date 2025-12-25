@@ -22,17 +22,27 @@
                 </div>
                 
                 <!-- Desktop Menu (lg and above) -->
-                <div class="hidden lg:flex items-center gap-4 xl:gap-8">
-                    <a href="index.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Home</a>
+                <div class="hidden lg:flex items-center gap-4 flex-nowrap">
+                    <!-- Home Dropdown -->
+                    <div class="relative group" id="home-dropdown-desktop">
+                        <button class="hover:text-[#00D9FF] transition whitespace-nowrap flex items-center gap-1" aria-expanded="false" aria-haspopup="true" id="home-dropdown-button-desktop">
+                            Home <span class="text-xs">▼</span>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-52 bg-[#111827] border border-[#00D9FF]/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden" role="menu" aria-labelledby="home-dropdown-button-desktop">
+                            <a href="index.html" class="block px-4 py-2 text-sm text-[#E5E7EB] hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition rounded-t-lg whitespace-nowrap overflow-hidden text-ellipsis" role="menuitem">Home</a>
+                            <a href="home2.html" class="block px-4 py-2 text-sm text-[#E5E7EB] hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition rounded-b-lg whitespace-nowrap overflow-hidden text-ellipsis" role="menuitem">Home – Alternate</a>
+                        </div>
+                    </div>
                     <a href="services.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Services</a>
                     <a href="industries.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Industries</a>
                     <a href="case-studies.html" class="text-[#00D9FF] hover:text-[#8B5CF6] transition whitespace-nowrap">Case Studies</a>
                     <a href="about.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">About</a>
                     <a href="contact.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Contact</a>
-                    <button id="theme-toggle" class="text-xl xl:text-2xl flex-shrink-0">☀️</button>
-                    <a href="login.html" class="px-4 xl:px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm xl:text-base whitespace-nowrap">Login</a>
-                    <a href="signup.html" class="px-4 xl:px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm xl:text-base whitespace-nowrap">Sign Up</a>
-                    <a href="contact.html" class="neomorph px-4 xl:px-6 py-2 rounded-lg text-[#00D9FF] hover:text-white transition text-sm xl:text-base whitespace-nowrap">Request a Quote</a>
+                    <a href="admin-dashboard.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Dashboard</a>
+                    <button id="theme-toggle" class="text-xl flex-shrink-0 ml-1">☀️</button>
+                    <a href="login.html" class="px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm whitespace-nowrap">Login</a>
+                    <a href="signup.html" class="px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm whitespace-nowrap">Sign Up</a>
+                    <a href="contact.html" class="neomorph px-4 py-2 rounded-lg text-[#00D9FF] hover:text-white transition text-sm whitespace-nowrap">Request a Quote</a>
                 </div>
                 
                 <!-- Tablet Menu (md to lg) -->
@@ -48,12 +58,19 @@
             <!-- Tablet Menu Dropdown -->
             <div id="tablet-menu" class="hidden mt-4 pb-4">
                 <div class="grid grid-cols-2 gap-4">
-                    <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home</a>
+                    <div class="col-span-2">
+                        <button class="w-full text-left px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm font-semibold" id="home-dropdown-button-tablet">Home ▼</button>
+                        <div id="home-dropdown-tablet" class="hidden mt-2 ml-4 space-y-2">
+                            <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home</a>
+                            <a href="home2.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home – Alternate</a>
+                        </div>
+                    </div>
                     <a href="services.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Services</a>
                     <a href="industries.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Industries</a>
                     <a href="case-studies.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Case Studies</a>
                     <a href="about.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">About</a>
                     <a href="contact.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Contact</a>
+                    <a href="admin-dashboard.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Dashboard</a>
                     <a href="login.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Login</a>
                     <a href="signup.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Sign Up</a>
                     <a href="contact.html" class="block px-4 py-2 rounded-lg neomorph text-[#00D9FF] hover:text-white text-sm text-center">Request a Quote</a>
@@ -62,12 +79,19 @@
             
             <!-- Mobile Menu Dropdown -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
-                <a href="index.html" class="block hover:text-[#00D9FF] transition">Home</a>
+                <div>
+                    <button class="w-full text-left text-[#00D9FF] font-semibold mb-2" id="home-dropdown-button-mobile">Home ▼</button>
+                    <div id="home-dropdown-mobile" class="hidden ml-4 space-y-2">
+                        <a href="index.html" class="block hover:text-[#00D9FF] transition">Home</a>
+                        <a href="home2.html" class="block hover:text-[#00D9FF] transition">Home – Alternate</a>
+                    </div>
+                </div>
                 <a href="services.html" class="block hover:text-[#00D9FF] transition">Services</a>
                 <a href="industries.html" class="block hover:text-[#00D9FF] transition">Industries</a>
                 <a href="case-studies.html" class="block text-[#00D9FF]">Case Studies</a>
                 <a href="about.html" class="block hover:text-[#00D9FF] transition">About</a>
                 <a href="contact.html" class="block hover:text-[#00D9FF] transition">Contact</a>
+                <a href="admin-dashboard.html" class="block hover:text-[#00D9FF] transition">Dashboard</a>
                 <button id="theme-toggle-mobile" class="text-2xl">☀️</button>
                 <a href="login.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Login</a>
                 <a href="signup.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Sign Up</a>
@@ -76,254 +100,293 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4">
-        <div class="container mx-auto max-w-5xl text-center fade-in">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">
-                Case Studies
-            </h1>
-            <p class="text-xl md:text-2xl text-[#9CA3AF] mb-8 max-w-3xl mx-auto">
-                Real results from real implementations - See how we've transformed businesses
-            </p>
+    <!-- Hero Section - New Design -->
+    <section class="cs-hero pt-32 pb-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-12 fade-in">
+                <h1 class="cs-hero-title text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6">
+                    Success Stories
+                </h1>
+                <p class="cs-hero-text text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+                    Real-world automation implementations delivering measurable results and transformative outcomes
+                </p>
+            </div>
         </div>
     </section>
 
-    <section class="featured-success py-20 px-4 bg-[#111827]">
+    <!-- Featured Case Study - New Design -->
+    <section class="cs-featured py-16 px-4">
         <div class="container mx-auto max-w-7xl">
-            <div class="text-center mb-12 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold text-[#00D9FF]">Featured Success</h2>
-                <p class="text-xl text-[#9CA3AF] max-w-3xl mx-auto">A deep dive into a flagship deployment delivering measurable results.</p>
-            </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 fade-in">
-                <div class="bg-[#0B0F1A] p-8 rounded-xl border border-[#00D9FF]/20 glow-hover">
-                    <div class="flex items-center justify-center mb-4">
-                        <span class="px-4 py-2 bg-[#00D9FF]/20 text-[#00D9FF] rounded-full text-sm font-semibold">Manufacturing</span>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-bold text-[#00D9FF] text-center mb-3">Next‑Gen Automotive Line</h3>
-                    <p class="text-[#9CA3AF] text-center mb-6">Integrated cobots, vision QA, and predictive maintenance across body assembly, paint, and inspection cells.</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-[#111827] rounded-lg">
-                            <h4 class="text-lg font-semibold text-[#8B5CF6] mb-2 text-center">Problem</h4>
-                            <p class="text-[#9CA3AF] text-sm">High defect rates, cycle time variance, and costly downtime during manual changeovers.</p>
-                        </div>
-                        <div class="p-6 bg-[#111827] rounded-lg">
-                            <h4 class="text-lg font-semibold text-[#8B5CF6] mb-2 text-center">Solution</h4>
-                            <ul class="text-[#9CA3AF] text-sm space-y-2">
-                                <li>Robotic assembly stations</li>
-                                <li>AI vision for inline QA</li>
-                                <li>Unified production dashboard</li>
-                                <li>Predictive maintenance models</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#0B0F1A] p-8 rounded-xl border border-[#00D9FF]/20 glow-hover">
-                    <div class="grid grid-cols-3 gap-4 mb-6">
-                        <div class="text-center p-6 bg-[#111827] rounded-lg">
-                            <div class="text-3xl font-bold text-[#00D9FF] mb-1">45%</div>
-                            <div class="text-[#9CA3AF] text-xs">Efficiency ↑</div>
-                        </div>
-                        <div class="text-center p-6 bg-[#111827] rounded-lg">
-                            <div class="text-3xl font-bold text-[#00D9FF] mb-1">30%</div>
-                            <div class="text-[#9CA3AF] text-xs">Cost ↓</div>
-                        </div>
-                        <div class="text-center p-6 bg-[#111827] rounded-lg">
-                            <div class="text-3xl font-bold text-[#00D9FF] mb-1">2.5%</div>
-                            <div class="text-[#9CA3AF] text-xs">Defects</div>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="p-6 bg-[#111827] rounded-lg">
-                            <h4 class="text-lg font-semibold text-[#8B5CF6] mb-2 text-center">Impact</h4>
-                            <p class="text-[#9CA3AF] text-sm">14k units/month capacity, stable 24/7 operation, ROI in 18 months.</p>
-                        </div>
-                        <div class="p-6 bg-[#111827] rounded-lg">
-                            <h4 class="text-lg font-semibold text-[#8B5CF6] mb-2 text-center">Highlights</h4>
-                            <div class="flex flex-wrap gap-2 justify-center">
-                                <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Cobots</span>
-                                <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Vision QA</span>
-                                <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Dashboard</span>
-                                <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Predictive</span>
+            <div class="cs-featured-card">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <div class="cs-featured-badge inline-block mb-4">Featured Case Study</div>
+                        <h2 class="cs-featured-title text-3xl md:text-4xl font-bold mb-6">
+                            Automotive Manufacturing Transformation
+                        </h2>
+                        <p class="cs-featured-text mb-6 leading-relaxed">
+                            A leading automotive manufacturer partnered with us to automate their production line, resulting in unprecedented efficiency gains and cost savings.
+                        </p>
+                        <div class="grid grid-cols-3 gap-4 mb-8">
+                            <div class="cs-featured-stat">
+                                <div class="cs-featured-stat-value">45%</div>
+                                <div class="cs-featured-stat-label">Efficiency</div>
+                            </div>
+                            <div class="cs-featured-stat">
+                                <div class="cs-featured-stat-value">30%</div>
+                                <div class="cs-featured-stat-label">Cost Reduction</div>
+                            </div>
+                            <div class="cs-featured-stat">
+                                <div class="cs-featured-stat-value">18mo</div>
+                                <div class="cs-featured-stat-label">ROI</div>
                             </div>
                         </div>
+                        <a href="#" class="cs-featured-button inline-block">Read Full Case Study →</a>
                     </div>
-                    <div class="text-center mt-6">
-                        <a href="#" class="inline-block px-6 py-3 rounded-lg border-2 border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0B0F1A] transition text-sm">Download Full Case PDF</a>
+                    <div class="cs-featured-content">
+                        <div class="cs-featured-section">
+                            <h3 class="cs-featured-heading">Challenge</h3>
+                            <p class="cs-featured-desc">
+                                Manual processes causing bottlenecks, high defect rates, and inconsistent production cycles affecting overall throughput.
+                            </p>
+                        </div>
+                        <div class="cs-featured-section">
+                            <h3 class="cs-featured-heading">Solution</h3>
+                            <ul class="cs-featured-list">
+                                <li>Integrated robotic assembly systems</li>
+                                <li>AI-powered quality inspection</li>
+                                <li>Real-time production monitoring</li>
+                                <li>Predictive maintenance protocols</li>
+                            </ul>
+                        </div>
+                        <div class="cs-featured-section">
+                            <h3 class="cs-featured-heading">Outcome</h3>
+                            <p class="cs-featured-desc">
+                                Achieved 45% efficiency improvement, reduced defects by 60%, and realized full ROI within 18 months with 24/7 operational capability.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="case-study-preview py-20 px-4">
+    <!-- Case Studies Grid - New Design -->
+    <section class="cs-grid py-20 px-4">
         <div class="container mx-auto max-w-7xl">
-            <div class="text-center mb-10 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold text-[#00D9FF]">Browse By Industry</h2>
-                <p class="text-xl text-[#9CA3AF] max-w-3xl mx-auto">Explore condensed summaries across sectors with key outcomes and highlights.</p>
+            <div class="text-center mb-16 fade-in">
+                <h2 class="cs-section-title text-4xl md:text-5xl font-bold mb-4">Explore Our Case Studies</h2>
+                <p class="cs-section-text text-lg md:text-xl max-w-2xl mx-auto">
+                    Browse successful automation implementations across various industries
+                </p>
             </div>
-            <div id="case-filters" class="flex flex-wrap items-center justify-center gap-3 mb-10 fade-in">
-                <button type="button" data-filter="all" class="px-4 py-2 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] hover:bg-[#00D9FF]/20 transition text-sm">All</button>
-                <button type="button" data-filter="manufacturing" class="px-4 py-2 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] hover:bg-[#00D9FF]/20 transition text-sm">Manufacturing</button>
-                <button type="button" data-filter="logistics" class="px-4 py-2 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] hover:bg-[#00D9FF]/20 transition text-sm">Logistics</button>
-                <button type="button" data-filter="healthcare" class="px-4 py-2 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] hover:bg-[#00D9FF]/20 transition text-sm">Healthcare</button>
-                <button type="button" data-filter="automotive" class="px-4 py-2 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] hover:bg-[#00D9FF]/20 transition text-sm">Automotive</button>
-                <button type="button" data-filter="energy" class="px-4 py-2 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] hover:bg-[#00D9FF]/20 transition text-sm">Energy</button>
-                <button type="button" data-filter="agriculture" class="px-4 py-2 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] hover:bg-[#00D9FF]/20 transition text-sm">Agriculture</button>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                <div class="case-card bg-[#0B0F1A] p-6 rounded-xl border border-[#00D9FF]/20 glow-hover" data-category="manufacturing">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/15 text-[#00D9FF] text-xs">Manufacturing</span>
-                        <div class="text-2xl">🏭</div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Case Study 1 -->
+                <div class="cs-card">
+                    <div class="cs-card-header">
+                        <span class="cs-card-category">Manufacturing</span>
+                        <div class="cs-card-icon">🏭</div>
                     </div>
-                    <h3 class="text-xl font-bold text-[#00D9FF] mb-2">High‑Precision Assembly</h3>
-                    <p class="text-[#9CA3AF] mb-4">Automated assembly, inline QA, and performance analytics across multi‑cell lines.</p>
-                    <div class="grid grid-cols-3 gap-3 mb-4">
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">+60%</div><div class="text-[#9CA3AF] text-xs">Throughput</div></div>
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">−40%</div><div class="text-[#9CA3AF] text-xs">Defects</div></div>
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">24/7</div><div class="text-[#9CA3AF] text-xs">Operation</div></div>
+                    <h3 class="cs-card-title">Precision Assembly Line</h3>
+                    <p class="cs-card-description">
+                        Automated multi-cell assembly system with integrated quality control and performance analytics
+                    </p>
+                    <div class="cs-card-stats">
+                        <div class="cs-card-stat">
+                            <span class="cs-card-stat-value">+60%</span>
+                            <span class="cs-card-stat-label">Throughput</span>
+                        </div>
+                        <div class="cs-card-stat">
+                            <span class="cs-card-stat-value">-40%</span>
+                            <span class="cs-card-stat-label">Defects</span>
+                        </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Cobots</span>
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Vision</span>
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Analytics</span>
-                    </div>
-                    <a href="case-manufacturing.html" class="inline-block px-4 py-2 rounded-lg border-2 border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0B0F1A] transition text-sm">View Details</a>
+                    <a href="case-manufacturing.html" class="cs-card-link">View Details →</a>
                 </div>
-                <div class="case-card bg-[#0B0F1A] p-6 rounded-xl border border-[#00D9FF]/20 glow-hover" data-category="logistics">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full bg-[#8B5CF6]/15 text-[#8B5CF6] text-xs">Logistics</span>
-                        <div class="text-2xl">📦</div>
+
+                <!-- Case Study 2 -->
+                <div class="cs-card">
+                    <div class="cs-card-header">
+                        <span class="cs-card-category">Logistics</span>
+                        <div class="cs-card-icon">📦</div>
                     </div>
-                    <h3 class="text-xl font-bold text-[#00D9FF] mb-2">Smart Fulfillment</h3>
-                    <p class="text-[#9CA3AF] mb-4">AMR fleets, automated sortation, and real‑time WMS integration for scale.</p>
-                    <div class="grid grid-cols-3 gap-3 mb-4">
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">3×</div><div class="text-[#9CA3AF] text-xs">Faster</div></div>
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">99.9%</div><div class="text-[#9CA3AF] text-xs">Accuracy</div></div>
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">−50%</div><div class="text-[#9CA3AF] text-xs">Labor</div></div>
+                    <h3 class="cs-card-title">Smart Warehouse System</h3>
+                    <p class="cs-card-description">
+                        Autonomous mobile robots and automated sortation integrated with warehouse management
+                    </p>
+                    <div class="cs-card-stats">
+                        <div class="cs-card-stat">
+                            <span class="cs-card-stat-value">3×</span>
+                            <span class="cs-card-stat-label">Faster</span>
+                        </div>
+                        <div class="cs-card-stat">
+                            <span class="cs-card-stat-value">99.9%</span>
+                            <span class="cs-card-stat-label">Accuracy</span>
+                        </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">AMRs</span>
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">RFID</span>
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Routing ML</span>
-                    </div>
-                    <a href="case-logistics.html" class="inline-block px-4 py-2 rounded-lg border-2 border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0B0F1A] transition text-sm">View Details</a>
+                    <a href="case-logistics.html" class="cs-card-link">View Details →</a>
                 </div>
-                <div class="case-card bg-[#0B0F1A] p-6 rounded-xl border border-[#00D9FF]/20 glow-hover" data-category="healthcare">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/15 text-[#00D9FF] text-xs">Healthcare</span>
-                        <div class="text-2xl">🏥</div>
+
+                <!-- Case Study 3 -->
+                <div class="cs-card">
+                    <div class="cs-card-header">
+                        <span class="cs-card-category">Healthcare</span>
+                        <div class="cs-card-icon">🏥</div>
                     </div>
-                    <h3 class="text-xl font-bold text-[#00D9FF] mb-2">Automated Lab</h3>
-                    <p class="text-[#9CA3AF] mb-4">End‑to‑end sample handling with traceability, validation, and reporting.</p>
-                    <div class="grid grid-cols-3 gap-3 mb-4">
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">70%</div><div class="text-[#9CA3AF] text-xs">Faster</div></div>
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">0%</div><div class="text-[#9CA3AF] text-xs">Mis‑ID</div></div>
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">24h</div><div class="text-[#9CA3AF] text-xs">Avg Result</div></div>
+                    <h3 class="cs-card-title">Laboratory Automation</h3>
+                    <p class="cs-card-description">
+                        End-to-end sample handling with RFID tracking, validation, and automated reporting
+                    </p>
+                    <div class="cs-card-stats">
+                        <div class="cs-card-stat">
+                            <span class="cs-card-stat-value">70%</span>
+                            <span class="cs-card-stat-label">Faster</span>
+                        </div>
+                        <div class="cs-card-stat">
+                            <span class="cs-card-stat-value">0%</span>
+                            <span class="cs-card-stat-label">Errors</span>
+                        </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">RFID</span>
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Prep Stations</span>
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Validation</span>
-                    </div>
-                    <a href="case-healthcare.html" class="inline-block px-4 py-2 rounded-lg border-2 border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0B0F1A] transition text-sm">View Details</a>
+                    <a href="case-healthcare.html" class="cs-card-link">View Details →</a>
                 </div>
-                <div class="case-card bg-[#0B0F1A] p-6 rounded-xl border border-[#00D9FF]/20 glow-hover" data-category="automotive">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/15 text-[#00D9FF] text-xs">Automotive</span>
-                        <div class="text-2xl">🚗</div>
+
+                <!-- Case Study 4 -->
+                <div class="cs-card">
+                    <div class="cs-card-header">
+                        <span class="cs-card-category">Automotive</span>
+                        <div class="cs-card-icon">🚗</div>
                     </div>
-                    <h3 class="text-xl font-bold text-[#00D9FF] mb-2">Flexible Lines</h3>
-                    <p class="text-[#9CA3AF] mb-4">Body welding, painting, installation, and inspection with consistent quality.</p>
-                    <div class="grid grid-cols-3 gap-3 mb-4">
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">Cycle</div><div class="text-[#9CA3AF] text-xs">Time ↓</div></div>
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">Safety</div><div class="text-[#9CA3AF] text-xs">↑</div></div>
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">Quality</div><div class="text-[#9CA3AF] text-xs">↑</div></div>
+                    <h3 class="cs-card-title">Flexible Production Lines</h3>
+                    <p class="cs-card-description">
+                        Robotic welding, painting, and inspection systems for consistent quality production
+                    </p>
+                    <div class="cs-card-stats">
+                        <div class="cs-card-stat">
+                            <span class="cs-card-stat-value">-25%</span>
+                            <span class="cs-card-stat-label">Cycle Time</span>
+                        </div>
+                        <div class="cs-card-stat">
+                            <span class="cs-card-stat-value">+35%</span>
+                            <span class="cs-card-stat-label">Quality</span>
+                        </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Welding</span>
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Paint</span>
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Inspection</span>
-                    </div>
-                    <a href="case-automotive.html" class="inline-block px-4 py-2 rounded-lg border-2 border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0B0F1A] transition text-sm">View Details</a>
+                    <a href="case-automotive.html" class="cs-card-link">View Details →</a>
                 </div>
-                <div class="case-card bg-[#0B0F1A] p-6 rounded-xl border border-[#00D9FF]/20 glow-hover" data-category="energy">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full bg-[#8B5CF6]/15 text-[#8B5CF6] text-xs">Energy</span>
-                        <div class="text-2xl">⚡</div>
+
+                <!-- Case Study 5 -->
+                <div class="cs-card">
+                    <div class="cs-card-header">
+                        <span class="cs-card-category">Energy</span>
+                        <div class="cs-card-icon">⚡</div>
                     </div>
-                    <h3 class="text-xl font-bold text-[#00D9FF] mb-2">Reliable Operations</h3>
-                    <p class="text-[#9CA3AF] mb-4">Inspection, grid monitoring, and substation automation with safety focus.</p>
-                    <div class="grid grid-cols-3 gap-3 mb-4">
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">Risk</div><div class="text-[#9CA3AF] text-xs">↓</div></div>
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">Reliability</div><div class="text-[#9CA3AF] text-xs">↑</div></div>
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">Cost</div><div class="text-[#9CA3AF] text-xs">↓</div></div>
+                    <h3 class="cs-card-title">Grid Monitoring System</h3>
+                    <p class="cs-card-description">
+                        Automated inspection and monitoring systems for enhanced reliability and safety
+                    </p>
+                    <div class="cs-card-stats">
+                        <div class="cs-card-stat">
+                            <span class="cs-card-stat-value">-50%</span>
+                            <span class="cs-card-stat-label">Risk</span>
+                        </div>
+                        <div class="cs-card-stat">
+                            <span class="cs-card-stat-value">+40%</span>
+                            <span class="cs-card-stat-label">Reliability</span>
+                        </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Inspection</span>
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Monitoring</span>
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Substations</span>
-                    </div>
-                    <a href="case-energy.html" class="inline-block px-4 py-2 rounded-lg border-2 border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0B0F1A] transition text-sm">View Details</a>
+                    <a href="case-energy.html" class="cs-card-link">View Details →</a>
                 </div>
-                <div class="case-card bg-[#0B0F1A] p-6 rounded-xl border border-[#00D9FF]/20 glow-hover" data-category="agriculture">
-                    <div class="flex items-center justify-between mb-4">
-                        <span class="px-3 py-1 rounded-full bg-[#8B5CF6]/15 text-[#8B5CF6] text-xs">Agriculture</span>
-                        <div class="text-2xl">🌾</div>
+
+                <!-- Case Study 6 -->
+                <div class="cs-card">
+                    <div class="cs-card-header">
+                        <span class="cs-card-category">Agriculture</span>
+                        <div class="cs-card-icon">🌾</div>
                     </div>
-                    <h3 class="text-xl font-bold text-[#00D9FF] mb-2">Smart Agri</h3>
-                    <p class="text-[#9CA3AF] mb-4">Automated sorting, packing, and precision inspection for food chains.</p>
-                    <div class="grid grid-cols-3 gap-3 mb-4">
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">Yield</div><div class="text-[#9CA3AF] text-xs">↑</div></div>
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">Waste</div><div class="text-[#9CA3AF] text-xs">↓</div></div>
-                        <div class="text-center p-4 bg-[#111827] rounded-lg"><div class="text-xl font-bold text-[#00D9FF]">Trace</div><div class="text-[#9CA3AF] text-xs">ability</div></div>
+                    <h3 class="cs-card-title">Food Processing Plant</h3>
+                    <p class="cs-card-description">
+                        Automated sorting, grading, and packaging systems with precision quality control
+                    </p>
+                    <div class="cs-card-stats">
+                        <div class="cs-card-stat">
+                            <span class="cs-card-stat-value">+50%</span>
+                            <span class="cs-card-stat-label">Yield</span>
+                        </div>
+                        <div class="cs-card-stat">
+                            <span class="cs-card-stat-value">-30%</span>
+                            <span class="cs-card-stat-label">Waste</span>
+                        </div>
                     </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Sorting</span>
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Packing</span>
-                        <span class="px-3 py-1 rounded-full bg-[#00D9FF]/10 text-[#00D9FF] text-xs">Inspection</span>
-                    </div>
-                    <a href="case-agriculture.html" class="inline-block px-4 py-2 rounded-lg border-2 border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-[#0B0F1A] transition text-sm">View Details</a>
+                    <a href="case-agriculture.html" class="cs-card-link">View Details →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="testimonials py-20 px-4 bg-[#111827]">
+    <!-- Testimonials - New Design -->
+    <section class="cs-testimonials py-20 px-4">
         <div class="container mx-auto max-w-7xl">
-            <div class="text-center mb-12 fade-in">
-                <h2 class="text-4xl md:text-5xl font-bold text-[#00D9FF]">What Clients Say</h2>
-                <p class="text-xl text-[#9CA3AF] max-w-3xl mx-auto">Partner feedback from programs delivered across industries.</p>
+            <div class="text-center mb-16 fade-in">
+                <h2 class="cs-section-title text-4xl md:text-5xl font-bold mb-4">Client Testimonials</h2>
+                <p class="cs-section-text text-lg md:text-xl max-w-2xl mx-auto">
+                    What our partners say about working with us
+                </p>
             </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-[#0B0F1A] p-6 rounded-xl border border-[#00D9FF]/20 glow-hover">
-                    <div class="text-lg font-semibold text-[#8B5CF6] mb-2 text-center">Operations Director</div>
-                    <p class="text-[#9CA3AF] text-sm">Consistent quality and faster cycles. The data visibility changed how we manage daily production.</p>
+                <div class="cs-testimonial-card">
+                    <div class="cs-testimonial-quote">"</div>
+                    <p class="cs-testimonial-text">
+                        The automation system transformed our production floor. We're seeing consistent quality and faster cycles that we never thought possible.
+                    </p>
+                    <div class="cs-testimonial-author">
+                        <div class="cs-testimonial-name">Sarah Johnson</div>
+                        <div class="cs-testimonial-role">Operations Director</div>
+                    </div>
                 </div>
-                <div class="bg-[#0B0F1A] p-6 rounded-xl border border-[#00D9FF]/20 glow-hover">
-                    <div class="text-lg font-semibold text-[#8B5CF6] mb-2 text-center">Logistics Lead</div>
-                    <p class="text-[#9CA3AF] text-sm">AMRs integrated smoothly with our WMS. Peak season was no longer a bottleneck.</p>
+                
+                <div class="cs-testimonial-card">
+                    <div class="cs-testimonial-quote">"</div>
+                    <p class="cs-testimonial-text">
+                        Seamless integration with our existing systems. The AMR fleet handles peak season volumes effortlessly, eliminating our previous bottlenecks.
+                    </p>
+                    <div class="cs-testimonial-author">
+                        <div class="cs-testimonial-name">Michael Chen</div>
+                        <div class="cs-testimonial-role">Logistics Manager</div>
+                    </div>
                 </div>
-                <div class="bg-[#0B0F1A] p-6 rounded-xl border border-[#00D9FF]/20 glow-hover">
-                    <div class="text-lg font-semibold text-[#8B5CF6] mb-2 text-center">Lab Manager</div>
-                    <p class="text-[#9CA3AF] text-sm">Traceability and zero misidentification made compliance straightforward and audits faster.</p>
+                
+                <div class="cs-testimonial-card">
+                    <div class="cs-testimonial-quote">"</div>
+                    <p class="cs-testimonial-text">
+                        Complete traceability and zero misidentification have made compliance straightforward. Our audit process is now significantly faster.
+                    </p>
+                    <div class="cs-testimonial-author">
+                        <div class="cs-testimonial-name">Dr. Emily Rodriguez</div>
+                        <div class="cs-testimonial-role">Lab Director</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 px-4 bg-gradient-to-r from-[#00D9FF]/10 to-[#8B5CF6]/10">
-        <div class="container mx-auto max-w-5xl text-center fade-in">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-[#00D9FF]">
-                Ready to Write Your Success Story?
+    <!-- CTA Section - New Design -->
+    <section class="cs-cta py-24 px-4">
+        <div class="container mx-auto max-w-4xl text-center fade-in">
+            <h2 class="cs-cta-title text-4xl md:text-5xl font-bold mb-6">
+                Ready to Create Your Success Story?
             </h2>
-            <p class="text-xl text-[#9CA3AF] mb-8 max-w-3xl mx-auto">
-                Contact us to discuss how we can help achieve similar results for your business
+            <p class="cs-cta-text text-xl md:text-2xl mb-10 max-w-2xl mx-auto">
+                Let's discuss how we can help you achieve similar results for your operations
             </p>
-            <a href="contact.html" class="inline-block neomorph px-8 py-4 rounded-lg text-[#00D9FF] hover:text-white text-lg font-semibold glow-hover">
-                Get Started Today
-            </a>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html" class="cs-cta-button-primary px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300">
+                    Get in Touch
+                </a>
+                <a href="services.html" class="cs-cta-button-secondary px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300">
+                    View Services
+                </a>
+            </div>
         </div>
     </section>
 
@@ -336,7 +399,7 @@
                         <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-8 w-8">
                         <span class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
                     </div>
-                    <p class="text-[#9CA3AF] text-sm">
+                    <p class="text-sm text-[#9CA3AF]">
                         Leading the future of robotics and automation solutions across industries worldwide.
                     </p>
                 </div>
@@ -420,4 +483,3 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-

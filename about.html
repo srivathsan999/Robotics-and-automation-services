@@ -22,17 +22,27 @@
                 </div>
                 
                 <!-- Desktop Menu (lg and above) -->
-                <div class="hidden lg:flex items-center gap-4 xl:gap-8">
-                    <a href="index.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Home</a>
+                <div class="hidden lg:flex items-center gap-4 flex-nowrap">
+                    <!-- Home Dropdown -->
+                    <div class="relative group" id="home-dropdown-desktop">
+                        <button class="hover:text-[#00D9FF] transition whitespace-nowrap flex items-center gap-1" aria-expanded="false" aria-haspopup="true" id="home-dropdown-button-desktop">
+                            Home <span class="text-xs">▼</span>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-52 bg-[#111827] border border-[#00D9FF]/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden" role="menu" aria-labelledby="home-dropdown-button-desktop">
+                            <a href="index.html" class="block px-4 py-2 text-sm text-[#E5E7EB] hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition rounded-t-lg whitespace-nowrap overflow-hidden text-ellipsis" role="menuitem">Home</a>
+                            <a href="home2.html" class="block px-4 py-2 text-sm text-[#E5E7EB] hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition rounded-b-lg whitespace-nowrap overflow-hidden text-ellipsis" role="menuitem">Home – Alternate</a>
+                        </div>
+                    </div>
                     <a href="services.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Services</a>
                     <a href="industries.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Industries</a>
                     <a href="case-studies.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Case Studies</a>
                     <a href="about.html" class="text-[#00D9FF] hover:text-[#8B5CF6] transition whitespace-nowrap">About</a>
                     <a href="contact.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Contact</a>
-                    <button id="theme-toggle" class="text-xl xl:text-2xl flex-shrink-0">☀️</button>
-                    <a href="login.html" class="px-4 xl:px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm xl:text-base whitespace-nowrap">Login</a>
-                    <a href="signup.html" class="px-4 xl:px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm xl:text-base whitespace-nowrap">Sign Up</a>
-                    <a href="contact.html" class="neomorph px-4 xl:px-6 py-2 rounded-lg text-[#00D9FF] hover:text-white transition text-sm xl:text-base whitespace-nowrap">Request a Quote</a>
+                    <a href="admin-dashboard.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Dashboard</a>
+                    <button id="theme-toggle" class="text-xl flex-shrink-0 ml-1">☀️</button>
+                    <a href="login.html" class="px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm whitespace-nowrap">Login</a>
+                    <a href="signup.html" class="px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm whitespace-nowrap">Sign Up</a>
+                    <a href="contact.html" class="neomorph px-4 py-2 rounded-lg text-[#00D9FF] hover:text-white transition text-sm whitespace-nowrap">Request a Quote</a>
                 </div>
                 
                 <!-- Tablet Menu (md to lg) -->
@@ -48,12 +58,19 @@
             <!-- Tablet Menu Dropdown -->
             <div id="tablet-menu" class="hidden mt-4 pb-4">
                 <div class="grid grid-cols-2 gap-4">
-                    <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home</a>
+                    <div class="col-span-2">
+                        <button class="w-full text-left px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm font-semibold" id="home-dropdown-button-tablet">Home ▼</button>
+                        <div id="home-dropdown-tablet" class="hidden mt-2 ml-4 space-y-2">
+                            <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home</a>
+                            <a href="home2.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home – Alternate</a>
+                        </div>
+                    </div>
                     <a href="services.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Services</a>
                     <a href="industries.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Industries</a>
                     <a href="case-studies.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Case Studies</a>
                     <a href="about.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">About</a>
                     <a href="contact.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Contact</a>
+                    <a href="admin-dashboard.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Dashboard</a>
                     <a href="login.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Login</a>
                     <a href="signup.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Sign Up</a>
                     <a href="contact.html" class="block px-4 py-2 rounded-lg neomorph text-[#00D9FF] hover:text-white text-sm text-center">Request a Quote</a>
@@ -62,12 +79,19 @@
             
             <!-- Mobile Menu Dropdown -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
-                <a href="index.html" class="block hover:text-[#00D9FF] transition">Home</a>
+                <div>
+                    <button class="w-full text-left text-[#00D9FF] font-semibold mb-2" id="home-dropdown-button-mobile">Home ▼</button>
+                    <div id="home-dropdown-mobile" class="hidden ml-4 space-y-2">
+                        <a href="index.html" class="block hover:text-[#00D9FF] transition">Home</a>
+                        <a href="home2.html" class="block hover:text-[#00D9FF] transition">Home – Alternate</a>
+                    </div>
+                </div>
                 <a href="services.html" class="block hover:text-[#00D9FF] transition">Services</a>
                 <a href="industries.html" class="block hover:text-[#00D9FF] transition">Industries</a>
                 <a href="case-studies.html" class="block hover:text-[#00D9FF] transition">Case Studies</a>
                 <a href="about.html" class="block text-[#00D9FF]">About</a>
                 <a href="contact.html" class="block hover:text-[#00D9FF] transition">Contact</a>
+                <a href="admin-dashboard.html" class="block hover:text-[#00D9FF] transition">Dashboard</a>
                 <button id="theme-toggle-mobile" class="text-2xl">☀️</button>
                 <a href="login.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Login</a>
                 <a href="signup.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Sign Up</a>

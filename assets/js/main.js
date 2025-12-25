@@ -125,6 +125,45 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
+// Home dropdown functionality
+(function() {
+  // Tablet dropdown
+  const tabletDropdownButton = document.getElementById('home-dropdown-button-tablet');
+  const tabletDropdown = document.getElementById('home-dropdown-tablet');
+  if (tabletDropdownButton && tabletDropdown) {
+    tabletDropdownButton.addEventListener('click', function(e) {
+      e.stopPropagation();
+      tabletDropdown.classList.toggle('hidden');
+    });
+  }
+
+  // Mobile dropdown
+  const mobileDropdownButton = document.getElementById('home-dropdown-button-mobile');
+  const mobileDropdown = document.getElementById('home-dropdown-mobile');
+  if (mobileDropdownButton && mobileDropdown) {
+    mobileDropdownButton.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileDropdown.classList.toggle('hidden');
+    });
+  }
+
+  // Desktop dropdown keyboard accessibility
+  const desktopDropdownButton = document.getElementById('home-dropdown-button-desktop');
+  const desktopDropdown = document.querySelector('#home-dropdown-desktop > div[role="menu"]');
+  if (desktopDropdownButton && desktopDropdown) {
+    // Keyboard support
+    desktopDropdownButton.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        desktopDropdown.classList.toggle('opacity-0');
+        desktopDropdown.classList.toggle('invisible');
+        desktopDropdown.classList.toggle('opacity-100');
+        desktopDropdown.classList.toggle('visible');
+      }
+    });
+  }
+})();
+
 // Form validation and submission handlers
 document.addEventListener('DOMContentLoaded', function() {
   const contactForm = document.getElementById('contact-form');
