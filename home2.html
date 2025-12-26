@@ -512,9 +512,8 @@
 
     <script src="assets/js/main.js"></script>
     <script>
-        // Home dropdown functionality for tablet and mobile
+        // Set active state for Home dropdown on home2 page
         document.addEventListener('DOMContentLoaded', function() {
-            // Set active state for Home dropdown on home2 page
             const homeDropdownButtonDesktop = document.getElementById('home-dropdown-button-desktop');
             if (homeDropdownButtonDesktop) {
                 homeDropdownButtonDesktop.classList.add('text-[#00D9FF]');
@@ -526,24 +525,6 @@
             const homeDropdownButtonMobile = document.getElementById('home-dropdown-button-mobile');
             if (homeDropdownButtonMobile) {
                 homeDropdownButtonMobile.classList.add('text-[#00D9FF]');
-            }
-
-            // Tablet dropdown
-            const tabletDropdownButton = document.getElementById('home-dropdown-button-tablet');
-            const tabletDropdown = document.getElementById('home-dropdown-tablet');
-            if (tabletDropdownButton && tabletDropdown) {
-                tabletDropdownButton.addEventListener('click', function() {
-                    tabletDropdown.classList.toggle('hidden');
-                });
-            }
-
-            // Mobile dropdown
-            const mobileDropdownButton = document.getElementById('home-dropdown-button-mobile');
-            const mobileDropdown = document.getElementById('home-dropdown-mobile');
-            if (mobileDropdownButton && mobileDropdown) {
-                mobileDropdownButton.addEventListener('click', function() {
-                    mobileDropdown.classList.toggle('hidden');
-                });
             }
         });
     </script>
