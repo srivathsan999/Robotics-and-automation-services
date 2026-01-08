@@ -2637,3 +2637,120 @@ nav img[src*="favicon.svg"] {
 .light-theme .testimonials .glow-hover:hover {
   box-shadow: 0 8px 24px rgba(0, 102, 204, 0.2) !important;
 }
+
+/* Professional Icon Enhancements */
+.service-card i,
+.industry-card i,
+.tech-card i {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.service-card:hover i,
+.industry-card:hover i,
+.tech-card:hover i {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+.home2-solution-card:hover .home2-solution-icon i {
+  transform: scale(1.15) translateY(-5px);
+  filter: drop-shadow(0 0 15px rgba(0, 217, 255, 0.6));
+  transition: all 0.3s ease;
+}
+
+.home2-industry-card:hover .home2-industry-icon i {
+  transform: scale(1.1) rotate(-5deg);
+  filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.6));
+  transition: all 0.3s ease;
+}
+
+.home2-stat-item i {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.home2-stat-item:hover i {
+  transform: scale(1.2) rotate(10deg);
+  filter: drop-shadow(0 0 10px rgba(0, 217, 255, 0.8));
+}
+
+.home2-benefit-card:hover i {
+  transform: scale(1.15) translateY(-5px);
+  filter: drop-shadow(0 0 12px rgba(0, 217, 255, 0.6));
+  transition: all 0.3s ease;
+}
+
+.home2-process-circle i {
+  transition: all 0.3s ease;
+}
+
+.home2-process-step:hover .home2-process-circle i {
+  transform: scale(1.2) rotate(15deg);
+  filter: drop-shadow(0 0 15px rgba(0, 217, 255, 0.8));
+}
+
+.home2-result-card:hover i {
+  transform: scale(1.1) translateY(-5px);
+  filter: drop-shadow(0 0 12px rgba(0, 217, 255, 0.6));
+  transition: all 0.3s ease;
+}
+
+/* Icon pulse animation for key sections */
+@keyframes iconPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.home2-solution-icon i,
+.home2-stat-item i {
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+/* Enhanced card hover effects with icons */
+.service-card,
+.industry-card,
+.tech-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before,
+.industry-card::before,
+.tech-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.service-card:hover::before,
+.industry-card:hover::before,
+.tech-card:hover::before {
+  left: 100%;
+}
+
+.home2-solution-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 217, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.home2-solution-card:hover::before {
+  left: 100%;
+}

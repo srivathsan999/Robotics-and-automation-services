@@ -6,6 +6,7 @@
     <title>RoboTech - Industrial Automation Solutions</title>
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/styles.css">
   </head>
 <body class="bg-[#0B0F1A] text-[#E5E7EB]">
@@ -42,7 +43,6 @@
                     <button id="theme-toggle" class="text-xl flex-shrink-0 ml-1">☀️</button>
                     <a href="login.html" class="px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm whitespace-nowrap">Login</a>
                     <a href="signup.html" class="px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm whitespace-nowrap">Sign Up</a>
-                    <a href="contact.html" class="neomorph px-4 py-2 rounded-lg text-[#00D9FF] hover:text-white transition text-sm whitespace-nowrap">Request a Quote</a>
                 </div>
                 
                 <!-- Tablet Menu (md to lg) -->
@@ -73,7 +73,6 @@
                     <a href="admin-dashboard.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Dashboard</a>
                     <a href="login.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Login</a>
                     <a href="signup.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Sign Up</a>
-                    <a href="contact.html" class="block px-4 py-2 rounded-lg neomorph text-[#00D9FF] hover:text-white text-sm text-center">Request a Quote</a>
                 </div>
             </div>
             
@@ -95,7 +94,6 @@
                 <button id="theme-toggle-mobile" class="text-2xl">☀️</button>
                 <a href="login.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Login</a>
                 <a href="signup.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Sign Up</a>
-                <a href="contact.html" class="inline-block neomorph px-6 py-2 rounded-lg text-[#00D9FF]">Request a Quote</a>
             </div>
         </div>
     </nav>
@@ -128,18 +126,30 @@
         <div class="container mx-auto max-w-6xl">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
                 <div class="home2-stat-item text-center">
+                    <div class="text-3xl mb-3 text-[#00D9FF]">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
                     <div class="home2-stat-number text-4xl md:text-5xl font-bold mb-2">500+</div>
                     <div class="home2-stat-label text-sm md:text-base">Projects Delivered</div>
                 </div>
                 <div class="home2-stat-item text-center">
+                    <div class="text-3xl mb-3 text-[#00D9FF]">
+                        <i class="fas fa-star"></i>
+                    </div>
                     <div class="home2-stat-number text-4xl md:text-5xl font-bold mb-2">95%</div>
                     <div class="home2-stat-label text-sm md:text-base">Client Satisfaction</div>
                 </div>
                 <div class="home2-stat-item text-center">
+                    <div class="text-3xl mb-3 text-[#00D9FF]">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <div class="home2-stat-number text-4xl md:text-5xl font-bold mb-2">18mo</div>
                     <div class="home2-stat-label text-sm md:text-base">Avg. ROI Timeline</div>
                 </div>
                 <div class="home2-stat-item text-center">
+                    <div class="text-3xl mb-3 text-[#00D9FF]">
+                        <i class="fas fa-headset"></i>
+                    </div>
                     <div class="home2-stat-number text-4xl md:text-5xl font-bold mb-2">24/7</div>
                     <div class="home2-stat-label text-sm md:text-base">Support Available</div>
                 </div>
@@ -159,80 +169,92 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="home2-solution-card group">
-                    <div class="home2-solution-icon text-5xl">🤖</div>
+                    <div class="home2-solution-icon text-5xl text-[#00D9FF]">
+                        <i class="fas fa-robot"></i>
+                    </div>
                     <h3 class="home2-solution-title text-2xl font-bold">Robotic Systems</h3>
                     <p class="home2-solution-text">
                         Advanced robotic arms and cobots for precision manufacturing, assembly, and material handling operations
                     </p>
                     <ul class="home2-solution-features">
-                        <li>✓ 6-axis robotic arms</li>
-                        <li>✓ Collaborative robots</li>
-                        <li>✓ Pick & place systems</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>6-axis robotic arms</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Collaborative robots</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Pick & place systems</li>
                     </ul>
                 </div>
                 
                 <div class="home2-solution-card group">
-                    <div class="home2-solution-icon text-5xl">⚙️</div>
+                    <div class="home2-solution-icon text-5xl text-[#00D9FF]">
+                        <i class="fas fa-cogs"></i>
+                    </div>
                     <h3 class="home2-solution-title text-2xl font-bold">Control Systems</h3>
                     <p class="home2-solution-text">
                         PLC, SCADA, and HMI solutions for seamless process control and real-time monitoring
                     </p>
                     <ul class="home2-solution-features">
-                        <li>✓ Programmable logic controllers</li>
-                        <li>✓ SCADA integration</li>
-                        <li>✓ Human-machine interfaces</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Programmable logic controllers</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>SCADA integration</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Human-machine interfaces</li>
                     </ul>
                 </div>
                 
                 <div class="home2-solution-card group">
-                    <div class="home2-solution-icon text-5xl">👁️</div>
+                    <div class="home2-solution-icon text-5xl text-[#00D9FF]">
+                        <i class="fas fa-eye"></i>
+                    </div>
                     <h3 class="home2-solution-title text-2xl font-bold">Vision Systems</h3>
                     <p class="home2-solution-text">
                         AI-powered computer vision for quality inspection, defect detection, and automated sorting
                     </p>
                     <ul class="home2-solution-features">
-                        <li>✓ Machine vision cameras</li>
-                        <li>✓ AI-based recognition</li>
-                        <li>✓ Quality assurance</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Machine vision cameras</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>AI-based recognition</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Quality assurance</li>
                     </ul>
                 </div>
                 
                 <div class="home2-solution-card group">
-                    <div class="home2-solution-icon text-5xl">🌐</div>
+                    <div class="home2-solution-icon text-5xl text-[#00D9FF]">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
                     <h3 class="home2-solution-title text-2xl font-bold">IoT Integration</h3>
                     <p class="home2-solution-text">
                         Connected devices and sensors for real-time data collection, analytics, and predictive maintenance
                     </p>
                     <ul class="home2-solution-features">
-                        <li>✓ Sensor networks</li>
-                        <li>✓ Cloud connectivity</li>
-                        <li>✓ Data analytics</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Sensor networks</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Cloud connectivity</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Data analytics</li>
                     </ul>
                 </div>
                 
                 <div class="home2-solution-card group">
-                    <div class="home2-solution-icon text-5xl">📊</div>
+                    <div class="home2-solution-icon text-5xl text-[#00D9FF]">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
                     <h3 class="home2-solution-title text-2xl font-bold">Analytics Platform</h3>
                     <p class="home2-solution-text">
                         Advanced analytics and reporting tools for actionable insights and performance optimization
                     </p>
                     <ul class="home2-solution-features">
-                        <li>✓ Real-time dashboards</li>
-                        <li>✓ Predictive analytics</li>
-                        <li>✓ Performance metrics</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Real-time dashboards</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Predictive analytics</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Performance metrics</li>
                     </ul>
                 </div>
                 
                 <div class="home2-solution-card group">
-                    <div class="home2-solution-icon text-5xl">🔧</div>
+                    <div class="home2-solution-icon text-5xl text-[#00D9FF]">
+                        <i class="fas fa-tools"></i>
+                    </div>
                     <h3 class="home2-solution-title text-2xl font-bold">Maintenance Support</h3>
                     <p class="home2-solution-text">
                         Comprehensive maintenance, upgrades, and 24/7 technical support to ensure optimal performance
                     </p>
                     <ul class="home2-solution-features">
-                        <li>✓ Preventive maintenance</li>
-                        <li>✓ Remote diagnostics</li>
-                        <li>✓ Training programs</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Preventive maintenance</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Remote diagnostics</li>
+                        <li><i class="fas fa-check text-[#00D9FF] mr-2"></i>Training programs</li>
                     </ul>
                 </div>
             </div>
@@ -251,22 +273,30 @@
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <div class="home2-industry-card text-center">
-                    <div class="home2-industry-icon text-6xl mb-4">🏭</div>
+                    <div class="home2-industry-icon text-6xl mb-4 text-[#8B5CF6]">
+                        <i class="fas fa-industry"></i>
+                    </div>
                     <h3 class="home2-industry-title text-xl font-bold mb-2">Manufacturing</h3>
                     <p class="home2-industry-text text-sm">Production lines & assembly</p>
                 </div>
                 <div class="home2-industry-card text-center">
-                    <div class="home2-industry-icon text-6xl mb-4">📦</div>
+                    <div class="home2-industry-icon text-6xl mb-4 text-[#8B5CF6]">
+                        <i class="fas fa-box"></i>
+                    </div>
                     <h3 class="home2-industry-title text-xl font-bold mb-2">Logistics</h3>
                     <p class="home2-industry-text text-sm">Warehouse & distribution</p>
                 </div>
                 <div class="home2-industry-card text-center">
-                    <div class="home2-industry-icon text-6xl mb-4">🚗</div>
+                    <div class="home2-industry-icon text-6xl mb-4 text-[#8B5CF6]">
+                        <i class="fas fa-car"></i>
+                    </div>
                     <h3 class="home2-industry-title text-xl font-bold mb-2">Automotive</h3>
                     <p class="home2-industry-text text-sm">Assembly & quality control</p>
                 </div>
                 <div class="home2-industry-card text-center">
-                    <div class="home2-industry-icon text-6xl mb-4">💊</div>
+                    <div class="home2-industry-icon text-6xl mb-4 text-[#8B5CF6]">
+                        <i class="fas fa-pills"></i>
+                    </div>
                     <h3 class="home2-industry-title text-xl font-bold mb-2">Pharma</h3>
                     <p class="home2-industry-text text-sm">Pharmaceutical & electronics</p>
                 </div>
@@ -286,6 +316,9 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="home2-benefit-card text-center">
+                    <div class="text-4xl mb-4 text-[#00D9FF]">
+                        <i class="fas fa-users"></i>
+                    </div>
                     <div class="home2-benefit-number text-5xl font-bold mb-4">01</div>
                     <h3 class="home2-benefit-title text-xl font-bold mb-3">Expert Team</h3>
                     <p class="home2-benefit-text">
@@ -293,6 +326,9 @@
                     </p>
                 </div>
                 <div class="home2-benefit-card text-center">
+                    <div class="text-4xl mb-4 text-[#00D9FF]">
+                        <i class="fas fa-trophy"></i>
+                    </div>
                     <div class="home2-benefit-number text-5xl font-bold mb-4">02</div>
                     <h3 class="home2-benefit-title text-xl font-bold mb-3">Proven Results</h3>
                     <p class="home2-benefit-text">
@@ -300,6 +336,9 @@
                     </p>
                 </div>
                 <div class="home2-benefit-card text-center">
+                    <div class="text-4xl mb-4 text-[#00D9FF]">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
                     <div class="home2-benefit-number text-5xl font-bold mb-4">03</div>
                     <h3 class="home2-benefit-title text-xl font-bold mb-3">Custom Solutions</h3>
                     <p class="home2-benefit-text">
@@ -307,6 +346,9 @@
                     </p>
                 </div>
                 <div class="home2-benefit-card text-center">
+                    <div class="text-4xl mb-4 text-[#00D9FF]">
+                        <i class="fas fa-life-ring"></i>
+                    </div>
                     <div class="home2-benefit-number text-5xl font-bold mb-4">04</div>
                     <h3 class="home2-benefit-title text-xl font-bold mb-3">Ongoing Support</h3>
                     <p class="home2-benefit-text">
@@ -332,29 +374,33 @@
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
                     <div class="home2-process-step text-center">
                         <div class="home2-process-circle w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
-                            <span class="text-3xl font-bold">1</span>
+                            <i class="fas fa-search text-3xl text-[#00D9FF]"></i>
                         </div>
+                        <div class="text-2xl font-bold mb-2 text-[#00D9FF]">01</div>
                         <h3 class="home2-process-title text-xl font-bold mb-3">Analysis</h3>
                         <p class="home2-process-text">Comprehensive assessment of current operations and automation opportunities</p>
                     </div>
                     <div class="home2-process-step text-center">
                         <div class="home2-process-circle w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
-                            <span class="text-3xl font-bold">2</span>
+                            <i class="fas fa-drafting-compass text-3xl text-[#00D9FF]"></i>
                         </div>
+                        <div class="text-2xl font-bold mb-2 text-[#00D9FF]">02</div>
                         <h3 class="home2-process-title text-xl font-bold mb-3">Design</h3>
                         <p class="home2-process-text">Custom architecture and system design aligned with business objectives</p>
                     </div>
                     <div class="home2-process-step text-center">
                         <div class="home2-process-circle w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
-                            <span class="text-3xl font-bold">3</span>
+                            <i class="fas fa-cogs text-3xl text-[#00D9FF]"></i>
                         </div>
+                        <div class="text-2xl font-bold mb-2 text-[#00D9FF]">03</div>
                         <h3 class="home2-process-title text-xl font-bold mb-3">Implementation</h3>
                         <p class="home2-process-text">Professional installation, configuration, and rigorous testing protocols</p>
                     </div>
                     <div class="home2-process-step text-center">
                         <div class="home2-process-circle w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 relative z-10">
-                            <span class="text-3xl font-bold">4</span>
+                            <i class="fas fa-rocket text-3xl text-[#00D9FF]"></i>
                         </div>
+                        <div class="text-2xl font-bold mb-2 text-[#00D9FF]">04</div>
                         <h3 class="home2-process-title text-xl font-bold mb-3">Optimization</h3>
                         <p class="home2-process-text">Continuous monitoring, fine-tuning, and performance enhancement</p>
                     </div>
@@ -375,6 +421,9 @@
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="home2-result-card text-center">
+                    <div class="text-5xl mb-4 text-[#00D9FF]">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <div class="home2-result-value text-6xl font-extrabold mb-4">45%</div>
                     <h3 class="home2-result-label text-xl font-bold mb-3">Efficiency Boost</h3>
                     <p class="home2-result-description">
@@ -382,6 +431,9 @@
                     </p>
                 </div>
                 <div class="home2-result-card text-center">
+                    <div class="text-5xl mb-4 text-[#00D9FF]">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
                     <div class="home2-result-value text-6xl font-extrabold mb-4">30%</div>
                     <h3 class="home2-result-label text-xl font-bold mb-3">Cost Reduction</h3>
                     <p class="home2-result-description">
@@ -389,6 +441,9 @@
                     </p>
                 </div>
                 <div class="home2-result-card text-center">
+                    <div class="text-5xl mb-4 text-[#00D9FF]">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
                     <div class="home2-result-value text-6xl font-extrabold mb-4">18mo</div>
                     <h3 class="home2-result-label text-xl font-bold mb-3">ROI Timeline</h3>
                     <p class="home2-result-description">
@@ -504,7 +559,7 @@
             <div class="text-center text-sm text-[#9CA3AF] border-t border-[#00D9FF]/20 pt-8">
                 <div class="flex items-center justify-center space-x-2">
                     <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-5 w-5">
-                    <p>&copy; 2025 RoboTech. All rights reserved.</p>
+                    <p>&copy; 2025 <span class="font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>. All rights reserved.</p>
                 </div>
             </div>
         </div>
