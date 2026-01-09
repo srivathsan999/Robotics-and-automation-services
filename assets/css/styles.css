@@ -133,6 +133,13 @@ html {
   color: #6B7280 !important;
 }
 
+/* Light mode: enforce single brand color for all brand text */
+.light-theme .bg-gradient-to-r.from-\[\#00D9FF\].to-\[\#8B5CF6\].bg-clip-text.text-transparent {
+  background: none !important;
+  -webkit-text-fill-color: #00D9FF !important;
+  color: #00D9FF !important;
+}
+
 /* Hero section text visibility */
 .light-theme .hero-description {
   color: #6B7280 !important;
@@ -774,13 +781,13 @@ nav img[src*="favicon.svg"] {
   display: none;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1279px) {
   #tablet-menu:not(.hidden) {
     display: block;
   }
 }
 
-@media (max-width: 767px), (min-width: 1024px) {
+@media (max-width: 767px), (min-width: 1280px) {
   #tablet-menu {
     display: none !important;
   }
