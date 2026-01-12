@@ -2423,6 +2423,67 @@ nav img[src*="favicon.svg"] {
   background-color: #F3F4F6 !important;
 }
 
+/* Admin Dashboard - Light Theme visibility fixes */
+.light-theme .stat-card {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0, 217, 255, 0.2) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06) !important;
+}
+.light-theme .stat-card .text-\[#9CA3AF\] {
+  color: #6B7280 !important;
+}
+.light-theme .stat-card.blue h3,
+.light-theme .stat-card.blue svg,
+.light-theme .stat-card.blue span {
+  color: #2563EB !important;
+}
+.light-theme .stat-card.blue span {
+  background: rgba(37, 99, 235, 0.15) !important;
+}
+.light-theme .stat-card.green h3,
+.light-theme .stat-card.green svg,
+.light-theme .stat-card.green span {
+  color: #16A34A !important;
+}
+.light-theme .stat-card.green span {
+  background: rgba(22, 163, 74, 0.15) !important;
+}
+.light-theme .stat-card.purple h3,
+.light-theme .stat-card.purple svg,
+.light-theme .stat-card.purple span {
+  color: #8B5CF6 !important;
+}
+.light-theme .stat-card.purple span {
+  background: rgba(139, 92, 246, 0.15) !important;
+}
+.light-theme .stat-card.orange h3,
+.light-theme .stat-card.orange svg,
+.light-theme .stat-card.orange span {
+  color: #EA580C !important;
+}
+.light-theme .stat-card.orange span {
+  background: rgba(234, 88, 12, 0.15) !important;
+}
+.light-theme .stat-card.pink h3,
+.light-theme .stat-card.pink svg,
+.light-theme .stat-card.pink span {
+  color: #DB2777 !important;
+}
+.light-theme .stat-card.pink span {
+  background: rgba(219, 39, 119, 0.15) !important;
+}
+.light-theme .stat-card.yellow h3,
+.light-theme .stat-card.yellow svg,
+.light-theme .stat-card.yellow span {
+  color: #CA8A04 !important;
+}
+.light-theme .stat-card.yellow span {
+  background: rgba(202, 138, 4, 0.15) !important;
+}
+.light-theme .chart-container {
+  background: #FFFFFF !important;
+  border-color: rgba(0, 217, 255, 0.2) !important;
+}
 /* Case Studies Page - Light Mode */
 
 /* Case Study Sections */
