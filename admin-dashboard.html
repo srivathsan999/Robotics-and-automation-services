@@ -246,7 +246,7 @@
 
             <!-- User Profile Section at Bottom -->
             <div class="mt-8 pt-6 border-t border-[#00D9FF]/20">
-                <div class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-[#0B0F1A]/50">
+                <div class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-[#0B0F1A]/50 mb-3">
                     <div class="w-10 h-10 rounded-full bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] flex items-center justify-center">
                         <i class="fas fa-user text-white text-sm"></i>
                     </div>
@@ -255,6 +255,11 @@
                         <p class="text-[#9CA3AF] text-xs truncate">admin@robotech.com</p>
                     </div>
                 </div>
+                <!-- Logout Button - Tablet & Mobile -->
+                <button id="btn-logout-side" class="w-full side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-red-400 hover:text-red-300 hover:bg-red-500/10 border border-red-500/20 hover:border-red-500/40 transition">
+                    <i class="fas fa-sign-out-alt w-5"></i>
+                    <span>Logout</span>
+                </button>
             </div>
         </div>
     </aside>
@@ -285,10 +290,10 @@
                     <i class="fas fa-search text-xl"></i>
                 </button>
                 
-                <!-- Logout Button -->
-                <button id="btn-logout" class="flex items-center space-x-2 px-4 py-2 rounded-lg border border-red-500/30 hover:border-red-500 hover:bg-red-500/10 transition text-red-400 hover:text-red-300">
+                <!-- Logout Button - Desktop Only -->
+                <button id="btn-logout" class="hidden xl:flex items-center space-x-2 px-4 py-2 rounded-lg border border-red-500/30 hover:border-red-500 hover:bg-red-500/10 transition text-red-400 hover:text-red-300">
                     <i class="fas fa-sign-out-alt"></i>
-                    <span class="hidden sm:inline">Logout</span>
+                    <span>Logout</span>
                 </button>
             </div>
         </div>
@@ -742,17 +747,35 @@
                 });
             });
 
-            // Logout Button
-            document.getElementById('btn-logout').addEventListener('click', function() {
-                const confirmed = confirm('Are you sure you want to logout?');
-                if (confirmed) {
-                    alert('Logging out...\n\nYou will be redirected to the home page.');
-                    // In a real application, this would clear session and redirect
-                    setTimeout(() => {
-                        window.location.href = 'index.html';
-                    }, 1000);
-                }
-            });
+            // Logout Button (Header - Desktop)
+            const logoutBtnHeader = document.getElementById('btn-logout');
+            if (logoutBtnHeader) {
+                logoutBtnHeader.addEventListener('click', function() {
+                    const confirmed = confirm('Are you sure you want to logout?');
+                    if (confirmed) {
+                        alert('Logging out...\n\nYou will be redirected to the home page.');
+                        // In a real application, this would clear session and redirect
+                        setTimeout(() => {
+                            window.location.href = 'index.html';
+                        }, 1000);
+                    }
+                });
+            }
+
+            // Logout Button (Side Menu - Tablet & Mobile)
+            const logoutBtnSide = document.getElementById('btn-logout-side');
+            if (logoutBtnSide) {
+                logoutBtnSide.addEventListener('click', function() {
+                    const confirmed = confirm('Are you sure you want to logout?');
+                    if (confirmed) {
+                        alert('Logging out...\n\nYou will be redirected to the home page.');
+                        // In a real application, this would clear session and redirect
+                        setTimeout(() => {
+                            window.location.href = 'index.html';
+                        }, 1000);
+                    }
+                });
+            }
 
             // Mobile Navigation Toggle
             const mobileNavToggle = document.getElementById('mobile-nav-toggle');
