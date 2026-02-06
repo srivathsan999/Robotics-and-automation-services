@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - RoboTech</title>
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -15,32 +18,78 @@
             border: 1px solid rgba(0, 217, 255, 0.3);
             transition: all 0.3s ease;
         }
+
         .stat-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
         }
-        .stat-card.blue { background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.2) 100%); border-color: rgba(59, 130, 246, 0.4); }
-        .stat-card.green { background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.2) 100%); border-color: rgba(34, 197, 94, 0.4); }
-        .stat-card.purple { background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(147, 51, 234, 0.2) 100%); border-color: rgba(168, 85, 247, 0.4); }
-        .stat-card.orange { background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(234, 88, 12, 0.2) 100%); border-color: rgba(249, 115, 22, 0.4); }
-        .stat-card.pink { background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(219, 39, 119, 0.2) 100%); border-color: rgba(236, 72, 153, 0.4); }
-        .stat-card.yellow { background: linear-gradient(135deg, rgba(234, 179, 8, 0.2) 0%, rgba(202, 138, 4, 0.2) 100%); border-color: rgba(234, 179, 8, 0.4); }
-        .chart-container { background: rgba(11, 15, 26, 0.8); border: 1px solid rgba(0, 217, 255, 0.2); border-radius: 12px; padding: 20px; }
-        .activity-item { border-left: 3px solid; transition: all 0.3s ease; }
-        .activity-item:hover { background: rgba(0, 217, 255, 0.05); transform: translateX(5px); }
-        .table-row:hover { background: rgba(0, 217, 255, 0.05); }
+
+        .stat-card.blue {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.2) 100%);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+
+        .stat-card.green {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2) 0%, rgba(22, 163, 74, 0.2) 100%);
+            border-color: rgba(34, 197, 94, 0.4);
+        }
+
+        .stat-card.purple {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(147, 51, 234, 0.2) 100%);
+            border-color: rgba(168, 85, 247, 0.4);
+        }
+
+        .stat-card.orange {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(234, 88, 12, 0.2) 100%);
+            border-color: rgba(249, 115, 22, 0.4);
+        }
+
+        .stat-card.pink {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(219, 39, 119, 0.2) 100%);
+            border-color: rgba(236, 72, 153, 0.4);
+        }
+
+        .stat-card.yellow {
+            background: linear-gradient(135deg, rgba(234, 179, 8, 0.2) 0%, rgba(202, 138, 4, 0.2) 100%);
+            border-color: rgba(234, 179, 8, 0.4);
+        }
+
+        .chart-container {
+            background: rgba(11, 15, 26, 0.8);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .activity-item {
+            border-left: 3px solid;
+            transition: all 0.3s ease;
+        }
+
+        .activity-item:hover {
+            background: rgba(0, 217, 255, 0.05);
+            transform: translateX(5px);
+        }
+
+        .table-row:hover {
+            background: rgba(0, 217, 255, 0.05);
+        }
+
         .side-nav-item {
             transition: all 0.3s ease;
             position: relative;
         }
+
         .side-nav-item:hover {
             background: rgba(0, 217, 255, 0.1);
             transform: translateX(5px);
         }
+
         .side-nav-item.active {
             background: linear-gradient(90deg, rgba(0, 217, 255, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
             border-left: 3px solid #00D9FF;
         }
+
         .side-nav-item.active::before {
             content: '';
             position: absolute;
@@ -50,6 +99,7 @@
             width: 3px;
             background: linear-gradient(180deg, #00D9FF 0%, #8B5CF6 100%);
         }
+
         .nav-section-title {
             color: #8B5CF6;
             font-size: 0.75rem;
@@ -57,9 +107,11 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
         }
+
         .mobile-nav-toggle {
             display: none;
         }
+
         .nav-backdrop {
             display: none;
             position: fixed;
@@ -68,43 +120,52 @@
             right: 0;
             bottom: 0;
             background: rgba(0, 0, 0, 0.7);
-            z: 30;
+            z-index: 30;
         }
+
         .nav-backdrop.active {
             display: block;
         }
+
         @media (max-width: 1279px) {
             .mobile-nav-toggle {
                 display: block;
             }
+
             .side-nav {
                 transform: translateX(-100%);
                 transition: transform 0.3s ease;
             }
+
             .side-nav.open {
                 transform: translateX(0);
             }
+
             header {
                 left: 0 !important;
             }
+
             .dashboard-content {
                 margin-left: 0 !important;
             }
         }
     </style>
 </head>
+
 <body class="bg-[#0B0F1A] text-[#E5E7EB]">
-    
+
     <!-- Mobile Backdrop -->
     <div id="nav-backdrop" class="nav-backdrop"></div>
 
     <!-- Side Navigation -->
-    <aside id="side-nav" class="side-nav fixed left-0 top-0 h-full w-64 bg-[#111827] border-r border-[#00D9FF]/20 z-40 overflow-y-auto">
+    <aside id="side-nav"
+        class="side-nav fixed left-0 top-0 h-full w-64 bg-[#111827] border-r border-[#00D9FF]/20 z-40 overflow-y-auto">
         <div class="p-6">
             <!-- Logo Section -->
             <div class="flex items-center space-x-2 mb-8 pb-6 border-b border-[#00D9FF]/20">
                 <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-8 w-8">
-                <span class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
+                <span
+                    class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
             </div>
 
             <!-- Navigation Menu -->
@@ -113,19 +174,23 @@
                 <div>
                     <div class="nav-section-title mb-3 px-4">Main</div>
                     <div class="space-y-1">
-                        <a href="#" class="side-nav-item active flex items-center space-x-3 px-4 py-3 rounded-lg text-white">
+                        <a href="#"
+                            class="side-nav-item active flex items-center space-x-3 px-4 py-3 rounded-lg text-white">
                             <i class="fas fa-home w-5 text-[#00D9FF]"></i>
                             <span class="font-medium">Dashboard</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-project-diagram w-5"></i>
                             <span>Projects</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-users w-5"></i>
                             <span>Users</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-robot w-5"></i>
                             <span>Robots & Devices</span>
                         </a>
@@ -136,19 +201,23 @@
                 <div>
                     <div class="nav-section-title mb-3 px-4">Analytics</div>
                     <div class="space-y-1">
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-chart-line w-5"></i>
                             <span>Performance</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-chart-bar w-5"></i>
                             <span>Reports</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-database w-5"></i>
                             <span>Data Analytics</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-brain w-5"></i>
                             <span>AI Insights</span>
                         </a>
@@ -159,19 +228,23 @@
                 <div>
                     <div class="nav-section-title mb-3 px-4">Operations</div>
                     <div class="space-y-1">
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-tasks w-5"></i>
                             <span>Tasks & Workflows</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-calendar-alt w-5"></i>
                             <span>Scheduling</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-tools w-5"></i>
                             <span>Maintenance</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-exclamation-triangle w-5"></i>
                             <span>Alerts & Notifications</span>
                         </a>
@@ -182,19 +255,23 @@
                 <div>
                     <div class="nav-section-title mb-3 px-4">Management</div>
                     <div class="space-y-1">
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-building w-5"></i>
                             <span>Organizations</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-user-shield w-5"></i>
                             <span>Roles & Permissions</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-file-invoice w-5"></i>
                             <span>Billing & Invoices</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-history w-5"></i>
                             <span>Audit Logs</span>
                         </a>
@@ -205,19 +282,23 @@
                 <div>
                     <div class="nav-section-title mb-3 px-4">Configuration</div>
                     <div class="space-y-1">
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-cog w-5"></i>
                             <span>System Settings</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-plug w-5"></i>
                             <span>Integrations</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-shield-alt w-5"></i>
                             <span>Security</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-palette w-5"></i>
                             <span>Appearance</span>
                         </a>
@@ -228,15 +309,18 @@
                 <div>
                     <div class="nav-section-title mb-3 px-4">Support</div>
                     <div class="space-y-1">
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-question-circle w-5"></i>
                             <span>Help Center</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-book w-5"></i>
                             <span>Documentation</span>
                         </a>
-                        <a href="#" class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
+                        <a href="#"
+                            class="side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-[#9CA3AF] hover:text-white">
                             <i class="fas fa-headset w-5"></i>
                             <span>Contact Support</span>
                         </a>
@@ -247,7 +331,8 @@
             <!-- User Profile Section at Bottom -->
             <div class="mt-8 pt-6 border-t border-[#00D9FF]/20">
                 <div class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-[#0B0F1A]/50 mb-3">
-                    <div class="w-10 h-10 rounded-full bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] flex items-center justify-center">
+                    <div
+                        class="w-10 h-10 rounded-full bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] flex items-center justify-center">
                         <i class="fas fa-user text-white text-sm"></i>
                     </div>
                     <div class="flex-1 min-w-0">
@@ -256,7 +341,8 @@
                     </div>
                 </div>
                 <!-- Logout Button - Tablet & Mobile -->
-                <button id="btn-logout-side" class="w-full side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-red-400 hover:text-red-300 hover:bg-red-500/10 border border-red-500/20 hover:border-red-500/40 transition">
+                <button id="btn-logout-side"
+                    class="w-full side-nav-item flex items-center space-x-3 px-4 py-3 rounded-lg text-red-400 hover:text-red-300 hover:bg-red-500/10 border border-red-500/20 hover:border-red-500/40 transition">
                     <i class="fas fa-sign-out-alt w-5"></i>
                     <span>Logout</span>
                 </button>
@@ -267,31 +353,39 @@
     <!-- Admin Header Bar -->
     <header class="glass fixed left-64 right-0 top-0 z-50 px-4 py-4 lg:left-64 transition-all duration-300">
         <div class="flex items-center justify-between">
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-nav-toggle" class="mobile-nav-toggle xl:hidden text-2xl text-[#00D9FF]">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <!-- Page Title -->
-            <div class="flex-1 ml-4 lg:ml-0">
-                <h2 class="text-lg font-semibold text-white">Dashboard Overview</h2>
+            <div class="flex items-center">
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-nav-toggle" class="mobile-nav-toggle xl:hidden text-2xl text-[#00D9FF] mr-4">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Brand Logo (Mobile/Tablet Only) -->
+                <a href="index.html" class="xl:hidden flex items-center space-x-2">
+                    <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-8 w-8">
+                    <span
+                        class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
+                </a>
             </div>
-            
+
+
+
             <!-- Header Actions -->
             <div class="flex items-center space-x-4">
                 <!-- Notifications -->
-                <button class="relative p-2 rounded-lg text-[#9CA3AF] hover:text-[#00D9FF] hover:bg-[#00D9FF]/10 transition">
+                <button
+                    class="relative p-2 rounded-lg text-[#9CA3AF] hover:text-[#00D9FF] hover:bg-[#00D9FF]/10 transition">
                     <i class="fas fa-bell text-xl"></i>
                     <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
                 </button>
-                
+
                 <!-- Search -->
                 <button class="p-2 rounded-lg text-[#9CA3AF] hover:text-[#00D9FF] hover:bg-[#00D9FF]/10 transition">
                     <i class="fas fa-search text-xl"></i>
                 </button>
-                
+
                 <!-- Logout Button - Desktop Only -->
-                <button id="btn-logout" class="hidden xl:flex items-center space-x-2 px-4 py-2 rounded-lg border border-red-500/30 hover:border-red-500 hover:bg-red-500/10 transition text-red-400 hover:text-red-300">
+                <button id="btn-logout"
+                    class="hidden xl:flex items-center space-x-2 px-4 py-2 rounded-lg border border-red-500/30 hover:border-red-500 hover:bg-red-500/10 transition text-red-400 hover:text-red-300">
                     <i class="fas fa-sign-out-alt"></i>
                     <span>Logout</span>
                 </button>
@@ -302,13 +396,15 @@
     <!-- Dashboard Content -->
     <div class="dashboard-content pt-20 pb-12 px-4 min-h-screen ml-64 lg:ml-64">
         <div class="container mx-auto max-w-7xl">
-            
+
             <!-- Header -->
-            <div class="mb-8 fade-in text-center pt-6 lg:pt-0">
-                <h1 class="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-[#00D9FF] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">
+            <div class="mb-8 fade-in text-left pt-6 lg:pt-0">
+                <h1
+                    class="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-[#00D9FF] via-[#8B5CF6] to-[#EC4899] bg-clip-text text-transparent">
                     Admin Dashboard
                 </h1>
-                <p class="text-[#9CA3AF] text-lg">Welcome back! Here's what's happening with your automation systems.</p>
+                <p class="text-[#9CA3AF] text-lg">Welcome back! Here's what's happening with your automation systems.
+                </p>
             </div>
 
             <!-- Stats Cards -->
@@ -317,7 +413,9 @@
                     <div class="flex items-center justify-between mb-4">
                         <div class="p-3 rounded-lg bg-blue-500/20">
                             <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                                </path>
                             </svg>
                         </div>
                         <span class="text-xs px-2 py-1 rounded-full bg-blue-500/20 text-blue-300">+12%</span>
@@ -330,7 +428,9 @@
                     <div class="flex items-center justify-between mb-4">
                         <div class="p-3 rounded-lg bg-green-500/20">
                             <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                </path>
                             </svg>
                         </div>
                         <span class="text-xs px-2 py-1 rounded-full bg-green-500/20 text-green-300">+8%</span>
@@ -343,7 +443,8 @@
                     <div class="flex items-center justify-between mb-4">
                         <div class="p-3 rounded-lg bg-purple-500/20">
                             <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
                         </div>
                         <span class="text-xs px-2 py-1 rounded-full bg-purple-500/20 text-purple-300">+23%</span>
@@ -356,7 +457,9 @@
                     <div class="flex items-center justify-between mb-4">
                         <div class="p-3 rounded-lg bg-orange-500/20">
                             <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
                             </svg>
                         </div>
                         <span class="text-xs px-2 py-1 rounded-full bg-orange-500/20 text-orange-300">+5%</span>
@@ -369,7 +472,8 @@
                     <div class="flex items-center justify-between mb-4">
                         <div class="p-3 rounded-lg bg-pink-500/20">
                             <svg class="w-6 h-6 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
                         <span class="text-xs px-2 py-1 rounded-full bg-pink-500/20 text-pink-300">-2%</span>
@@ -382,7 +486,9 @@
                     <div class="flex items-center justify-between mb-4">
                         <div class="p-3 rounded-lg bg-yellow-500/20">
                             <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                                </path>
                             </svg>
                         </div>
                         <span class="text-xs px-2 py-1 rounded-full bg-yellow-500/20 text-yellow-300">+15%</span>
@@ -465,35 +571,47 @@
                 <div class="bg-[#111827] p-6 rounded-xl border border-[#8B5CF6]/20">
                     <h3 class="text-xl font-bold text-[#8B5CF6] mb-4">Quick Actions</h3>
                     <div class="space-y-3">
-                        <button id="btn-add-project" class="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-blue-600/20 border border-blue-400/30 text-blue-300 hover:bg-blue-500/30 transition text-left">
+                        <button id="btn-add-project"
+                            class="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-blue-600/20 border border-blue-400/30 text-blue-300 hover:bg-blue-500/30 transition text-left">
                             <div class="flex items-center space-x-3">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 4v16m8-8H4"></path>
                                 </svg>
                                 <span>Add New Project</span>
                             </div>
                         </button>
-                        <button id="btn-generate-report" class="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-400/30 text-green-300 hover:bg-green-500/30 transition text-left">
+                        <button id="btn-generate-report"
+                            class="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-green-500/20 to-green-600/20 border border-green-400/30 text-green-300 hover:bg-green-500/30 transition text-left">
                             <div class="flex items-center space-x-3">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                    </path>
                                 </svg>
                                 <span>Generate Report</span>
                             </div>
                         </button>
-                        <button id="btn-system-settings" class="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-400/30 text-purple-300 hover:bg-purple-500/30 transition text-left">
+                        <button id="btn-system-settings"
+                            class="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-purple-500/20 to-purple-600/20 border border-purple-400/30 text-purple-300 hover:bg-purple-500/30 transition text-left">
                             <div class="flex items-center space-x-3">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                                    </path>
                                 </svg>
                                 <span>System Settings</span>
                             </div>
                         </button>
-                        <button id="btn-view-analytics" class="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-400/30 text-orange-300 hover:bg-orange-500/30 transition text-left">
+                        <button id="btn-view-analytics"
+                            class="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-orange-500/20 to-orange-600/20 border border-orange-400/30 text-orange-300 hover:bg-orange-500/30 transition text-left">
                             <div class="flex items-center space-x-3">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                                 </svg>
                                 <span>View Analytics</span>
                             </div>
@@ -506,7 +624,8 @@
             <div class="bg-[#111827] p-6 rounded-xl border border-[#00D9FF]/20 fade-in">
                 <div class="flex items-center justify-between mb-4">
                     <h3 class="text-xl font-bold text-[#00D9FF]">Recent Projects</h3>
-                    <button id="btn-view-all-projects" class="px-4 py-2 rounded-lg bg-[#00D9FF]/10 text-[#00D9FF] hover:bg-[#00D9FF]/20 transition text-sm">
+                    <button id="btn-view-all-projects"
+                        class="px-4 py-2 rounded-lg bg-[#00D9FF]/10 text-[#00D9FF] hover:bg-[#00D9FF]/20 transition text-sm">
                         View All
                     </button>
                 </div>
@@ -526,60 +645,72 @@
                                 <td class="py-4 px-4 text-white">Automotive Assembly</td>
                                 <td class="py-4 px-4 text-[#9CA3AF]">AutoCorp Inc.</td>
                                 <td class="py-4 px-4">
-                                    <span class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-sm">Active</span>
+                                    <span
+                                        class="px-3 py-1 rounded-full bg-green-500/20 text-green-300 text-sm">Active</span>
                                 </td>
                                 <td class="py-4 px-4">
                                     <div class="w-full bg-[#0B0F1A] rounded-full h-2">
-                                        <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full" style="width: 85%"></div>
+                                        <div class="bg-gradient-to-r from-green-400 to-green-600 h-2 rounded-full"
+                                            style="width: 85%"></div>
                                     </div>
                                 </td>
                                 <td class="py-4 px-4">
-                                    <button class="btn-view-project text-[#00D9FF] hover:text-[#8B5CF6] transition" data-project="Automotive Assembly">View</button>
+                                    <button class="btn-view-project text-[#00D9FF] hover:text-[#8B5CF6] transition"
+                                        data-project="Automotive Assembly">View</button>
                                 </td>
                             </tr>
                             <tr class="table-row border-b border-[#00D9FF]/10">
                                 <td class="py-4 px-4 text-white">Warehouse Automation</td>
                                 <td class="py-4 px-4 text-[#9CA3AF]">LogiTech Solutions</td>
                                 <td class="py-4 px-4">
-                                    <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm">In Progress</span>
+                                    <span class="px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 text-sm">In
+                                        Progress</span>
                                 </td>
                                 <td class="py-4 px-4">
                                     <div class="w-full bg-[#0B0F1A] rounded-full h-2">
-                                        <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full" style="width: 65%"></div>
+                                        <div class="bg-gradient-to-r from-blue-400 to-blue-600 h-2 rounded-full"
+                                            style="width: 65%"></div>
                                     </div>
                                 </td>
                                 <td class="py-4 px-4">
-                                    <button class="btn-view-project text-[#00D9FF] hover:text-[#8B5CF6] transition" data-project="Warehouse Automation">View</button>
+                                    <button class="btn-view-project text-[#00D9FF] hover:text-[#8B5CF6] transition"
+                                        data-project="Warehouse Automation">View</button>
                                 </td>
                             </tr>
                             <tr class="table-row border-b border-[#00D9FF]/10">
                                 <td class="py-4 px-4 text-white">Lab Automation</td>
                                 <td class="py-4 px-4 text-[#9CA3AF]">MediCare Systems</td>
                                 <td class="py-4 px-4">
-                                    <span class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-sm">Pending</span>
+                                    <span
+                                        class="px-3 py-1 rounded-full bg-yellow-500/20 text-yellow-300 text-sm">Pending</span>
                                 </td>
                                 <td class="py-4 px-4">
                                     <div class="w-full bg-[#0B0F1A] rounded-full h-2">
-                                        <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full" style="width: 30%"></div>
+                                        <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 h-2 rounded-full"
+                                            style="width: 30%"></div>
                                     </div>
                                 </td>
                                 <td class="py-4 px-4">
-                                    <button class="btn-view-project text-[#00D9FF] hover:text-[#8B5CF6] transition" data-project="Lab Automation">View</button>
+                                    <button class="btn-view-project text-[#00D9FF] hover:text-[#8B5CF6] transition"
+                                        data-project="Lab Automation">View</button>
                                 </td>
                             </tr>
                             <tr class="table-row border-b border-[#00D9FF]/10">
                                 <td class="py-4 px-4 text-white">Smart Manufacturing</td>
                                 <td class="py-4 px-4 text-[#9CA3AF]">TechManufacturing Co.</td>
                                 <td class="py-4 px-4">
-                                    <span class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm">Planning</span>
+                                    <span
+                                        class="px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-sm">Planning</span>
                                 </td>
                                 <td class="py-4 px-4">
                                     <div class="w-full bg-[#0B0F1A] rounded-full h-2">
-                                        <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full" style="width: 15%"></div>
+                                        <div class="bg-gradient-to-r from-purple-400 to-purple-600 h-2 rounded-full"
+                                            style="width: 15%"></div>
                                     </div>
                                 </td>
                                 <td class="py-4 px-4">
-                                    <button class="btn-view-project text-[#00D9FF] hover:text-[#8B5CF6] transition" data-project="Smart Manufacturing">View</button>
+                                    <button class="btn-view-project text-[#00D9FF] hover:text-[#8B5CF6] transition"
+                                        data-project="Smart Manufacturing">View</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -596,7 +727,9 @@
             <div class="text-center text-sm text-[#9CA3AF]">
                 <div class="flex items-center justify-center space-x-2 mb-4">
                     <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-5 w-5">
-                    <p>&copy; 2025 <span class="font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>. All rights reserved.</p>
+                    <p>&copy; 2026 <span
+                            class="font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>.
+                        All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -676,16 +809,16 @@
         });
 
         // Fade in animation
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const fadeElements = document.querySelectorAll('.fade-in');
             fadeElements.forEach(el => {
                 el.classList.add('visible');
             });
 
             // Button Functionality
-            
+
             // Add New Project Button
-            document.getElementById('btn-add-project').addEventListener('click', function() {
+            document.getElementById('btn-add-project').addEventListener('click', function () {
                 const projectName = prompt('Enter project name:');
                 if (projectName && projectName.trim()) {
                     alert(`Project "${projectName}" has been added successfully!\n\nYou will be redirected to the project details page.`);
@@ -695,7 +828,7 @@
             });
 
             // Generate Report Button
-            document.getElementById('btn-generate-report').addEventListener('click', function() {
+            document.getElementById('btn-generate-report').addEventListener('click', function () {
                 const confirmed = confirm('Generate comprehensive system report?\n\nThis will include:\n- System performance metrics\n- User activity statistics\n- Project status overview\n- Robot operational data');
                 if (confirmed) {
                     // Show loading state
@@ -703,7 +836,7 @@
                     const originalText = btn.innerHTML;
                     btn.innerHTML = '<div class="flex items-center space-x-3"><svg class="animate-spin w-5 h-5" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg><span>Generating...</span></div>';
                     btn.disabled = true;
-                    
+
                     setTimeout(() => {
                         btn.innerHTML = originalText;
                         btn.disabled = false;
@@ -714,21 +847,21 @@
             });
 
             // System Settings Button
-            document.getElementById('btn-system-settings').addEventListener('click', function() {
+            document.getElementById('btn-system-settings').addEventListener('click', function () {
                 alert('Opening System Settings...\n\nAvailable options:\n- General Settings\n- User Management\n- Security Settings\n- Notification Preferences\n- Integration Settings');
                 // In a real application, this would open a settings modal or navigate to settings page
                 console.log('System settings opened');
             });
 
             // View Analytics Button
-            document.getElementById('btn-view-analytics').addEventListener('click', function() {
+            document.getElementById('btn-view-analytics').addEventListener('click', function () {
                 alert('Opening Advanced Analytics Dashboard...\n\nAvailable analytics:\n- Real-time performance metrics\n- Historical data trends\n- Predictive analytics\n- Custom reports\n- Export options');
                 // In a real application, this would navigate to analytics page or open analytics modal
                 console.log('Analytics dashboard opened');
             });
 
             // View All Projects Button
-            document.getElementById('btn-view-all-projects').addEventListener('click', function() {
+            document.getElementById('btn-view-all-projects').addEventListener('click', function () {
                 alert('Loading all projects...\n\nYou will be redirected to the projects page with detailed filters and search options.');
                 // In a real application, this would navigate to a projects listing page
                 console.log('Viewing all projects');
@@ -736,7 +869,7 @@
 
             // Project View Buttons (in table)
             document.querySelectorAll('.btn-view-project').forEach(button => {
-                button.addEventListener('click', function() {
+                button.addEventListener('click', function () {
                     const projectName = this.getAttribute('data-project');
                     const confirmed = confirm(`View details for "${projectName}"?\n\nYou will see:\n- Project overview\n- Timeline and milestones\n- Team members\n- Progress reports\n- Documents and resources`);
                     if (confirmed) {
@@ -750,7 +883,7 @@
             // Logout Button (Header - Desktop)
             const logoutBtnHeader = document.getElementById('btn-logout');
             if (logoutBtnHeader) {
-                logoutBtnHeader.addEventListener('click', function() {
+                logoutBtnHeader.addEventListener('click', function () {
                     const confirmed = confirm('Are you sure you want to logout?');
                     if (confirmed) {
                         alert('Logging out...\n\nYou will be redirected to the home page.');
@@ -765,7 +898,7 @@
             // Logout Button (Side Menu - Tablet & Mobile)
             const logoutBtnSide = document.getElementById('btn-logout-side');
             if (logoutBtnSide) {
-                logoutBtnSide.addEventListener('click', function() {
+                logoutBtnSide.addEventListener('click', function () {
                     const confirmed = confirm('Are you sure you want to logout?');
                     if (confirmed) {
                         alert('Logging out...\n\nYou will be redirected to the home page.');
@@ -783,19 +916,19 @@
             const navBackdrop = document.getElementById('nav-backdrop');
 
             if (mobileNavToggle && sideNav) {
-                mobileNavToggle.addEventListener('click', function() {
+                mobileNavToggle.addEventListener('click', function () {
                     sideNav.classList.toggle('open');
                     navBackdrop.classList.toggle('active');
                 });
 
-                navBackdrop.addEventListener('click', function() {
+                navBackdrop.addEventListener('click', function () {
                     sideNav.classList.remove('open');
                     navBackdrop.classList.remove('active');
                 });
 
                 // Close nav when clicking on nav items (mobile)
                 document.querySelectorAll('.side-nav-item').forEach(item => {
-                    item.addEventListener('click', function(e) {
+                    item.addEventListener('click', function (e) {
                         if (window.innerWidth <= 1024) {
                             e.preventDefault();
                             sideNav.classList.remove('open');
@@ -810,5 +943,5 @@
         });
     </script>
 </body>
-</html>
 
+</html>

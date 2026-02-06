@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body class="bg-[#0B0F1A] text-[#E5E7EB]">
-    
+
     <!-- Navbar -->
     <nav class="glass fixed w-full top-0 z-50 px-4 py-4">
         <div class="container mx-auto max-w-7xl">
@@ -17,68 +19,96 @@
                 <div class="flex items-center space-x-2">
                     <a href="index.html" class="flex items-center space-x-2">
                         <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-8 w-8">
-                        <span class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
+                        <span
+                            class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
                     </a>
                 </div>
-                
+
                 <!-- Desktop Menu (xl and above) -->
                 <div class="hidden xl:flex items-center gap-4 flex-nowrap">
                     <!-- Home Dropdown -->
                     <div class="relative group" id="home-dropdown-desktop">
-                        <button class="hover:text-[#00D9FF] transition whitespace-nowrap flex items-center gap-1" aria-expanded="false" aria-haspopup="true" id="home-dropdown-button-desktop">
+                        <button class="hover:text-[#00D9FF] transition whitespace-nowrap flex items-center gap-1"
+                            aria-expanded="false" aria-haspopup="true" id="home-dropdown-button-desktop">
                             Home <span class="text-xs">▼</span>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-52 bg-[#111827] border border-[#00D9FF]/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden" role="menu" aria-labelledby="home-dropdown-button-desktop">
-                            <a href="index.html" class="block px-4 py-2 text-sm text-[#E5E7EB] hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition rounded-t-lg whitespace-nowrap overflow-hidden text-ellipsis" role="menuitem">Home</a>
-                            <a href="home2.html" class="block px-4 py-2 text-sm text-[#E5E7EB] hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition rounded-b-lg whitespace-nowrap overflow-hidden text-ellipsis" role="menuitem">Home – Alternate</a>
+                        <div class="absolute top-full left-0 mt-2 w-52 bg-[#111827] border border-[#00D9FF]/30 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 overflow-hidden"
+                            role="menu" aria-labelledby="home-dropdown-button-desktop">
+                            <a href="index.html"
+                                class="block px-4 py-2 text-sm text-[#E5E7EB] hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition rounded-t-lg whitespace-nowrap overflow-hidden text-ellipsis"
+                                role="menuitem">Home</a>
+                            <a href="home2.html"
+                                class="block px-4 py-2 text-sm text-[#E5E7EB] hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition rounded-b-lg whitespace-nowrap overflow-hidden text-ellipsis"
+                                role="menuitem">Home – Alternate</a>
                         </div>
                     </div>
                     <a href="services.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Services</a>
                     <a href="industries.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Industries</a>
-                    <a href="case-studies.html" class="text-[#00D9FF] hover:text-[#8B5CF6] transition whitespace-nowrap">Case Studies</a>
+                    <a href="case-studies.html"
+                        class="text-[#00D9FF] hover:text-[#8B5CF6] transition whitespace-nowrap">Case Studies</a>
                     <a href="about.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">About</a>
                     <a href="contact.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Contact</a>
-                    <a href="admin-dashboard.html" class="hover:text-[#00D9FF] transition whitespace-nowrap">Dashboard</a>
+                    <a href="admin-dashboard.html"
+                        class="hover:text-[#00D9FF] transition whitespace-nowrap">Dashboard</a>
                     <button id="theme-toggle" class="text-xl flex-shrink-0 ml-1">☀️</button>
-                    <a href="login.html" class="px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm whitespace-nowrap">Login</a>
-                    <a href="signup.html" class="px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm whitespace-nowrap">Sign Up</a>
+                    <a href="login.html"
+                        class="px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm whitespace-nowrap">Login</a>
+                    <a href="signup.html"
+                        class="px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-sm whitespace-nowrap">Sign
+                        Up</a>
                 </div>
-                
+
                 <!-- Tablet Menu (md to xl) -->
                 <div class="hidden md:flex xl:hidden items-center gap-3">
                     <button id="theme-toggle-tablet" class="text-xl flex-shrink-0">☀️</button>
                     <button id="tablet-menu-button" class="text-xl flex-shrink-0">☰</button>
                 </div>
-                
+
                 <!-- Mobile Menu Button -->
                 <button id="mobile-menu-button" class="md:hidden text-2xl">☰</button>
             </div>
-            
+
             <!-- Tablet Menu Dropdown -->
             <div id="tablet-menu" class="hidden mt-4 pb-4">
                 <div class="grid grid-cols-2 gap-4">
                     <div class="col-span-2">
-                        <button class="w-full text-left px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm font-semibold" id="home-dropdown-button-tablet">Home ▼</button>
+                        <button
+                            class="w-full text-left px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm font-semibold"
+                            id="home-dropdown-button-tablet">Home ▼</button>
                         <div id="home-dropdown-tablet" class="hidden mt-2 ml-4 space-y-2">
-                            <a href="index.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home</a>
-                            <a href="home2.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home – Alternate</a>
+                            <a href="index.html"
+                                class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home</a>
+                            <a href="home2.html"
+                                class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Home
+                                – Alternate</a>
                         </div>
                     </div>
-                    <a href="services.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Services</a>
-                    <a href="industries.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Industries</a>
-                    <a href="case-studies.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Case Studies</a>
-                    <a href="about.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">About</a>
-                    <a href="contact.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Contact</a>
-                    <a href="admin-dashboard.html" class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Dashboard</a>
-                    <a href="login.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Login</a>
-                    <a href="signup.html" class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Sign Up</a>
+                    <a href="services.html"
+                        class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Services</a>
+                    <a href="industries.html"
+                        class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Industries</a>
+                    <a href="case-studies.html"
+                        class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Case
+                        Studies</a>
+                    <a href="about.html"
+                        class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">About</a>
+                    <a href="contact.html"
+                        class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Contact</a>
+                    <a href="admin-dashboard.html"
+                        class="block px-4 py-2 rounded-lg hover:bg-[#00D9FF]/10 hover:text-[#00D9FF] transition text-sm">Dashboard</a>
+                    <a href="login.html"
+                        class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Login</a>
+                    <a href="signup.html"
+                        class="block px-4 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-sm text-center text-[#00D9FF]">Sign
+                        Up</a>
                 </div>
             </div>
-            
+
             <!-- Mobile Menu Dropdown -->
             <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4 pb-4">
                 <div>
-                    <button class="w-full text-left text-[#00D9FF] font-semibold mb-2" id="home-dropdown-button-mobile">Home ▼</button>
+                    <button class="w-full text-left text-[#00D9FF] font-semibold mb-2"
+                        id="home-dropdown-button-mobile">Home ▼</button>
                     <div id="home-dropdown-mobile" class="hidden ml-4 space-y-2">
                         <a href="index.html" class="block hover:text-[#00D9FF] transition">Home</a>
                         <a href="home2.html" class="block hover:text-[#00D9FF] transition">Home – Alternate</a>
@@ -91,8 +121,11 @@
                 <a href="contact.html" class="block hover:text-[#00D9FF] transition">Contact</a>
                 <a href="admin-dashboard.html" class="block hover:text-[#00D9FF] transition">Dashboard</a>
                 <button id="theme-toggle-mobile" class="text-2xl">☀️</button>
-                <a href="login.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Login</a>
-                <a href="signup.html" class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Sign Up</a>
+                <a href="login.html"
+                    class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Login</a>
+                <a href="signup.html"
+                    class="inline-block px-6 py-2 rounded-lg border border-[#00D9FF]/30 hover:border-[#00D9FF] hover:bg-[#00D9FF]/10 transition text-[#00D9FF] text-center">Sign
+                    Up</a>
             </div>
         </div>
     </nav>
@@ -122,7 +155,8 @@
                             Automotive Manufacturing Transformation
                         </h2>
                         <p class="cs-featured-text mb-6 leading-relaxed">
-                            A leading automotive manufacturer partnered with us to automate their production line, resulting in unprecedented efficiency gains and cost savings.
+                            A leading automotive manufacturer partnered with us to automate their production line,
+                            resulting in unprecedented efficiency gains and cost savings.
                         </p>
                         <div class="grid grid-cols-3 gap-4 mb-8">
                             <div class="cs-featured-stat">
@@ -144,7 +178,8 @@
                         <div class="cs-featured-section">
                             <h3 class="cs-featured-heading">Challenge</h3>
                             <p class="cs-featured-desc">
-                                Manual processes causing bottlenecks, high defect rates, and inconsistent production cycles affecting overall throughput.
+                                Manual processes causing bottlenecks, high defect rates, and inconsistent production
+                                cycles affecting overall throughput.
                             </p>
                         </div>
                         <div class="cs-featured-section">
@@ -159,7 +194,8 @@
                         <div class="cs-featured-section">
                             <h3 class="cs-featured-heading">Outcome</h3>
                             <p class="cs-featured-desc">
-                                Achieved 45% efficiency improvement, reduced defects by 60%, and realized full ROI within 18 months with 24/7 operational capability.
+                                Achieved 45% efficiency improvement, reduced defects by 60%, and realized full ROI
+                                within 18 months with 24/7 operational capability.
                             </p>
                         </div>
                     </div>
@@ -177,7 +213,7 @@
                     Browse successful automation implementations across various industries
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Case Study 1 -->
                 <div class="cs-card">
@@ -329,36 +365,51 @@
                     What our partners say about working with us
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="cs-testimonial-card">
-                    <div class="cs-testimonial-quote">"</div>
-                    <p class="cs-testimonial-text">
-                        The automation system transformed our production floor. We're seeing consistent quality and faster cycles that we never thought possible.
+                <div class="cs-testimonial-card text-center">
+                    <div class="cs-testimonial-quote mx-auto">"</div>
+                    <p class="cs-testimonial-text mb-8">
+                        The automation system transformed our production floor. We're seeing consistent quality and
+                        faster cycles that we never thought possible.
                     </p>
-                    <div class="cs-testimonial-author">
+                    <div class="cs-testimonial-author flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#00D9FF]/10 flex items-center justify-center mb-4 border border-[#00D9FF]/30">
+                            <span class="text-xl">🏭</span>
+                        </div>
                         <div class="cs-testimonial-name">Sarah Johnson</div>
                         <div class="cs-testimonial-role">Operations Director</div>
                     </div>
                 </div>
-                
-                <div class="cs-testimonial-card">
-                    <div class="cs-testimonial-quote">"</div>
-                    <p class="cs-testimonial-text">
-                        Seamless integration with our existing systems. The AMR fleet handles peak season volumes effortlessly, eliminating our previous bottlenecks.
+
+                <div class="cs-testimonial-card text-center">
+                    <div class="cs-testimonial-quote mx-auto">"</div>
+                    <p class="cs-testimonial-text mb-8">
+                        Seamless integration with our existing systems. The AMR fleet handles peak season volumes
+                        effortlessly, eliminating our previous bottlenecks.
                     </p>
-                    <div class="cs-testimonial-author">
+                    <div class="cs-testimonial-author flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#00D9FF]/10 flex items-center justify-center mb-4 border border-[#00D9FF]/30">
+                            <span class="text-xl">📦</span>
+                        </div>
                         <div class="cs-testimonial-name">Michael Chen</div>
                         <div class="cs-testimonial-role">Logistics Manager</div>
                     </div>
                 </div>
-                
-                <div class="cs-testimonial-card">
-                    <div class="cs-testimonial-quote">"</div>
-                    <p class="cs-testimonial-text">
-                        Complete traceability and zero misidentification have made compliance straightforward. Our audit process is now significantly faster.
+
+                <div class="cs-testimonial-card text-center">
+                    <div class="cs-testimonial-quote mx-auto">"</div>
+                    <p class="cs-testimonial-text mb-8">
+                        Complete traceability and zero misidentification have made compliance straightforward. Our audit
+                        process is now significantly faster.
                     </p>
-                    <div class="cs-testimonial-author">
+                    <div class="cs-testimonial-author flex flex-col items-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-[#00D9FF]/10 flex items-center justify-center mb-4 border border-[#00D9FF]/30">
+                            <span class="text-xl">🏥</span>
+                        </div>
                         <div class="cs-testimonial-name">Dr. Emily Rodriguez</div>
                         <div class="cs-testimonial-role">Lab Director</div>
                     </div>
@@ -377,10 +428,12 @@
                 Let's discuss how we can help you achieve similar results for your operations
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="contact.html" class="cs-cta-button-primary px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300">
+                <a href="contact.html"
+                    class="cs-cta-button-primary px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300">
                     Get in Touch
                 </a>
-                <a href="services.html" class="cs-cta-button-secondary px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300">
+                <a href="services.html"
+                    class="cs-cta-button-secondary px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-300">
                     View Services
                 </a>
             </div>
@@ -394,23 +447,28 @@
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
                         <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-8 w-8">
-                        <span class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
+                        <span
+                            class="text-xl font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>
                     </div>
                     <p class="text-sm text-[#9CA3AF]">
                         Leading the future of robotics and automation solutions across industries worldwide.
                     </p>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-bold mb-4 text-[#00D9FF]">Quick Links</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="services.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Services</a></li>
-                        <li><a href="industries.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Industries</a></li>
-                        <li><a href="case-studies.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Case Studies</a></li>
-                        <li><a href="about.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">About Us</a></li>
+                        <li><a href="services.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Services</a>
+                        </li>
+                        <li><a href="industries.html"
+                                class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Industries</a></li>
+                        <li><a href="case-studies.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Case
+                                Studies</a></li>
+                        <li><a href="about.html" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">About Us</a>
+                        </li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-bold mb-4 text-[#00D9FF]">Policies</h4>
                     <ul class="space-y-2 text-sm">
@@ -419,47 +477,62 @@
                         <li><a href="#" class="text-[#9CA3AF] hover:text-[#00D9FF] transition">Cookie Policy</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-bold mb-4 text-[#00D9FF]">Connect</h4>
                     <ul class="space-y-3 text-sm">
                         <li>
-                            <a href="https://linkedin.com" target="_blank" class="flex items-center space-x-2 text-[#9CA3AF] hover:text-[#00D9FF] transition">
-                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            <a href="https://linkedin.com" target="_blank"
+                                class="flex items-center space-x-2 text-[#9CA3AF] hover:text-[#00D9FF] transition">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                                 </svg>
                                 <span>LinkedIn</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://facebook.com" target="_blank" class="flex items-center space-x-2 text-[#9CA3AF] hover:text-[#00D9FF] transition">
-                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            <a href="https://facebook.com" target="_blank"
+                                class="flex items-center space-x-2 text-[#9CA3AF] hover:text-[#00D9FF] transition">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                                 </svg>
                                 <span>Facebook</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://instagram.com" target="_blank" class="flex items-center space-x-2 text-[#9CA3AF] hover:text-[#00D9FF] transition">
-                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            <a href="https://instagram.com" target="_blank"
+                                class="flex items-center space-x-2 text-[#9CA3AF] hover:text-[#00D9FF] transition">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                                 </svg>
                                 <span>Instagram</span>
                             </a>
                         </li>
                         <li>
-                            <a href="contact.html" class="flex items-center space-x-2 text-[#9CA3AF] hover:text-[#00D9FF] transition">
-                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            <a href="contact.html"
+                                class="flex items-center space-x-2 text-[#9CA3AF] hover:text-[#00D9FF] transition">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                                 <span>Contact Us</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:info@robotech.com" class="flex items-center space-x-2 text-[#9CA3AF] hover:text-[#00D9FF] transition">
-                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
+                            <a href="mailto:info@robotech.com"
+                                class="flex items-center space-x-2 text-[#9CA3AF] hover:text-[#00D9FF] transition">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
                                 </svg>
                                 <span>info@robotech.com</span>
                             </a>
@@ -467,11 +540,13 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="text-center text-sm text-[#9CA3AF] border-t border-[#00D9FF]/20 pt-8">
                 <div class="flex items-center justify-center space-x-2">
                     <img src="assets/img/favicon.svg" alt="RoboTech Icon" class="h-5 w-5">
-                    <p>&copy; 2025 <span class="font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>. All rights reserved.</p>
+                    <p>&copy; 2026 <span
+                            class="font-bold bg-gradient-to-r from-[#00D9FF] to-[#8B5CF6] bg-clip-text text-transparent">RoboTech</span>.
+                        All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -479,4 +554,5 @@
 
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
